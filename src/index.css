@@ -1,0 +1,138 @@
+/* Root styles */
+:root {
+  --primary-color: #004D40;
+  --secondary-color: #9ed203;
+  --tertiary-color: #e9f3de;
+  --primary-color-dark: #050908;
+}
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+[data-bs-theme="light"] {
+  --bs-body-color: var(--primary-color);
+  --bs-body-bg: var(--tertiary-color);
+
+  .dropdown-menu {
+    --bs-dropdown-bg: var(--primary-color);
+    --bs-dropdown-link-active-bg: var(--primary-color);
+  }
+
+  .btn-secondary {
+    --bs-btn-bg: var(--secondary-color);
+    --bs-btn-hover-bg: var(--primary-color);
+  }
+
+  .btn-primary {
+    --bs-btn-bg: var(--primary-color);
+    --bs-btn-hover-bg: var(--secondary-color);
+  }
+
+  .card {
+    --bs-card-bg: var(--tertiary-color);
+    --bs-card-color: var(--primary-color);
+  }
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-color: var(--tertiary-color);
+  --bs-body-bg: var(--primary-color-dark);
+
+  .dropdown-menu {
+    --bs-dropdown-bg: var(--primary-color);
+    --bs-dropdown-link-active-bg: var(--primary-color);
+  }
+
+  .btn-secondary {
+    --bs-btn-bg: var(--secondary-color);
+    --bs-btn-hover-color: var(--primary-color);
+    --bs-btn-hover-bg: var(--tertiary-color);
+  }
+
+  .btn-primary {
+    --bs-btn-bg: var(--tertiary-color);
+    --bs-btn-color: var(--primary-color);
+    --bs-btn-hover-bg: var(--secondary-color);
+  }
+
+  .card {
+    --bs-card-bg: var(--primary-color);
+    --bs-card-color: var(--tertiary-color);
+  }
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+.btn {
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 0px 10px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  cursor: pointer;
+}
+
+.card {
+  transition: background-color 2s ease, color 2s ease, box-shadow 0.5s ease;
+}
+
+/* Main Styles */
+
+.container {
+  position: relative;
+  max-width: 1140px;
+  padding: 20px;
+}
+
+/* Spinner */
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-left-color: var(--secondary-color);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
