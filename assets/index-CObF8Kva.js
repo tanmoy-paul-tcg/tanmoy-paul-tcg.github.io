@@ -844,6 +844,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 margin-top: 10px;
                 padding-left: 5px;
               }
+
+              .navbar-brand {
+                font-weight: 400;
+                margin-right: 4px;
+                margin-left: 4px;
+              }
             }
           `})]})})}function w2(){return g.jsx("footer",{className:"footer",children:g.jsxs(pt,{children:[g.jsx("div",{children:g.jsxs("p",{children:[g.jsx("span",{className:"pink",children:"©"})," 2024 Pritish Joshi",g.jsx("br",{}),g.jsx("br",{}),"Written in ",g.jsx(ft,{icon:i2})," & ",g.jsx(ft,{icon:l2})]})}),g.jsx("style",{children:`
                 .footer {
