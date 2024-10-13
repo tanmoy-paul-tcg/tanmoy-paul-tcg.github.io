@@ -1,32 +1,24 @@
 import React from "react";
-import { Image , Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import Cards from "./Cards";
 
 function Publications() {
   return (
     <Container>
       <Row>
-      <h1>Not Found!</h1>
-      <h2>Publications page is being developed</h2>
+        <Col lg={4}>
+        <h1>Publications</h1>
+        </Col>
       </Row>
+      <hr className="my-4" />
       <Row>
-        <Image src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/offline_2.svg' alt="Offline Image" className="off-img"/>
+        <Cards />
       </Row>
       <style>
         {`
         h1 {
-          color: var(--primary-color);
-          text-align: center;
-        }
-
-        h2 {
-          color: var(--secondary-color);
-          text-align: center;
-        }
-
-        .off-img {
-          width: 100%;
-          height: 100vh;
-          align-self: center;
+          font-size: 50px;
+          font-weight: bold;
         }
         `}
       </style>
