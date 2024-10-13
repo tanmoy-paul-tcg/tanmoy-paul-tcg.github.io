@@ -678,7 +678,6 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }
         `})]})}const E2="/assets/rb-xZcOXmV7.jpeg",C2="/assets/nm-BKrSvcRy.jpeg",_2="/assets/pj-C0FTbQjO.jpeg";function N2(){return c.jsxs(ht,{children:[c.jsx(Me,{children:c.jsx(kt,{lg:6,children:c.jsx("h1",{children:"Team Members"})})}),c.jsx("hr",{className:"my-4"}),c.jsxs(Me,{children:[c.jsx(kt,{lg:4,md:6,className:"mb-4",children:c.jsxs(ne,{children:[c.jsx(ne.Img,{variant:"top",src:E2,alt:"Card cap"}),c.jsxs(ne.Body,{children:[c.jsx(ne.Title,{children:"Rajdeep Boral"}),c.jsx(ne.Text,{className:"card-text",children:"Doctoral Candidate"}),c.jsxs("div",{className:"button-container",children:[c.jsx(je,{variant:"primary",href:"https://github.com/paultanmoy00",target:"_blank",children:c.jsx(re,{icon:ti})}),c.jsx(je,{variant:"primary",href:"https://scholar.google.co.in/citations?user=8YG_SSAAAAAJ&hl=en",target:"_blank",children:c.jsx(re,{icon:qo})}),c.jsx(je,{variant:"primary",href:"https://www.linkedin.com/in/tanmoy-paul-11b79924/",target:"_blank",children:c.jsx(re,{icon:ei})})]})]})]})}),c.jsx(kt,{lg:4,md:6,className:"mb-4",children:c.jsxs(ne,{children:[c.jsx(ne.Img,{variant:"top",src:C2,alt:"Card cap"}),c.jsxs(ne.Body,{children:[c.jsx(ne.Title,{children:"Nishant Mishra"}),c.jsx(ne.Text,{className:"card-text",children:"Project Associate"}),c.jsxs("div",{className:"button-container",children:[c.jsx(je,{variant:"primary",href:"https://github.com/paultanmoy00",target:"_blank",children:c.jsx(re,{icon:ti})}),c.jsx(je,{variant:"primary",href:"https://scholar.google.co.in/citations?user=8YG_SSAAAAAJ&hl=en",target:"_blank",children:c.jsx(re,{icon:qo})}),c.jsx(je,{variant:"primary",href:"https://www.linkedin.com/in/tanmoy-paul-11b79924/",target:"_blank",children:c.jsx(re,{icon:ei})})]})]})]})}),c.jsx(kt,{lg:4,md:6,className:"mb-4",children:c.jsxs(ne,{children:[c.jsx(ne.Img,{variant:"top",src:_2,alt:"Card cap"}),c.jsxs(ne.Body,{children:[c.jsx(ne.Title,{children:"Pritish Joshi"}),c.jsx(ne.Text,{className:"card-text",children:"Project Associate"}),c.jsxs("div",{className:"button-container",children:[c.jsx(je,{variant:"primary",href:"https://github.com/paultanmoy00",target:"_blank",children:c.jsx(re,{icon:ti})}),c.jsx(je,{variant:"primary",href:"https://scholar.google.co.in/citations?user=8YG_SSAAAAAJ&hl=en",target:"_blank",children:c.jsx(re,{icon:qo})}),c.jsx(je,{variant:"primary",href:"https://www.linkedin.com/in/tanmoy-paul-11b79924/",target:"_blank",children:c.jsx(re,{icon:ei})})]})]})]})})]}),c.jsx("style",{children:`
         h1 {
-          color: var(--primary-color);
           font-size: 50px;
           font-weight: bold;
         }
@@ -758,7 +757,6 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }
         `})]},t))}function P2(){return c.jsxs(ht,{children:[c.jsx(Me,{children:c.jsx(kt,{lg:4,children:c.jsx("h1",{children:"Publications"})})}),c.jsx("hr",{className:"my-4"}),c.jsx(Me,{children:c.jsx(j2,{})}),c.jsx("style",{children:`
         h1 {
-          color: var(--primary-color);
           font-size: 50px;
           font-weight: bold;
         }
