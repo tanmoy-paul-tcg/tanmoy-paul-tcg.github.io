@@ -9,10 +9,10 @@ function Footer() {
     <footer className="footer">
         <Container>
             <Row>
-                <Col sm={4} className='footer-cols'>
+                <Col sm={4} className='footer-cols mb-3'>
                     <a href="https:www.tcgcrest.org"><Image src={tcg} className='footer-img'/></a>
                 </Col>
-                <Col sm={4} className='footer-cols'>
+                <Col sm={4} className='footer-cols mb-3'>
                     <span className='sec'>Address</span>
                     <br/>
                     Office:
@@ -28,7 +28,7 @@ function Footer() {
                     Street No. 18, Block EP, Sector V, Salt lake, 
                     Kolkata 700091, West Bengal, INDIA
                 </Col>
-                <Col sm={4} className='footer-cols'>
+                <Col sm={4} className='footer-cols mb-3'>
                     <span className='sec'>Contact</span>
                     <br/>
                     E-mail:
@@ -85,6 +85,12 @@ function Footer() {
 
                 .fa-bootstrap {
                     color: var(--secondary-color);
+                }
+
+                @media (max-width: 767px) {
+                    .footer-img {
+                        width: 50%;
+                    }
                 }
                 `}
             </style>
