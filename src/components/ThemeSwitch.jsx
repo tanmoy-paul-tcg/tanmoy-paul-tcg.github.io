@@ -4,9 +4,9 @@ import {faSun, faMoon} from "@fortawesome/free-solid-svg-icons";
 
 function ThemeSwitch() {
 
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
   useEffect(() => {
-    document.documentElement.setAttribute('data-bs-theme', 'light');
+    document.documentElement.setAttribute('data-bs-theme', 'dark');
   }, []);
   const switchTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -23,8 +23,8 @@ function ThemeSwitch() {
             onChange={switchTheme}
             aria-label="Switch between dark and light mode"/>
             <label htmlFor="checkbox" className="checkbox-label">
-            <FontAwesomeIcon icon={faMoon} />
             <FontAwesomeIcon icon={faSun} />
+            <FontAwesomeIcon icon={faMoon} />
             <span className="ball"></span>
             </label>
             <style>

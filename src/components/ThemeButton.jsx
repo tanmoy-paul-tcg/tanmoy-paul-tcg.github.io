@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 function ThemeButton() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-bs-theme', 'light');
+    document.documentElement.setAttribute('data-bs-theme', 'dark');
   }, []);
 
   const switchTheme = () => {
