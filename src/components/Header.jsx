@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Container, Navbar, Nav } from "react-bootstrap";
+import { Image, Container, Navbar, Nav } from "react-bootstrap";
 import ThemeSwitch from "./ThemeSwitch";
 import ThemeButton from "./ThemeButton";
+import logo from "../images/logo.svg"
 
 export const useActiveState = () => {
   const [active, setActive] = useState("home");
@@ -21,7 +22,7 @@ function Header(props) {
         <Navbar variant="dark" expand="lg" collapseOnSelect>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Brand href="#">
-          Materials <span className="pink">Modelling</span> Lab
+          <Image src={logo} alt="logo-image" height="80" className="d-inline-block"/>
           </Navbar.Brand>
           <ThemeButton/>
           <Navbar.Collapse id="basic-navbar-nav" className="col-nav">
@@ -94,7 +95,6 @@ function Header(props) {
             }
 
             .navbar-brand {
-              font-weight: 500;
               margin-right: 8px;
               margin-left: 8px;
             }
