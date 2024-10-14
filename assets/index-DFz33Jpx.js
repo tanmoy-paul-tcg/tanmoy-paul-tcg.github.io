@@ -919,17 +919,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     text-align: left;
                 }
 
-                .pink {
+                .footer .pink {
                     color: var(--secondary-color);
                     font-weight: bold;
                     font-size: 150%;
                 }
 
-                a {
+                .footer a {
                     color: var(--secondary-color);
                 }
 
-                a:hover {
+                .footer a:hover {
                     cusror: pointer;
                     font-size: 110%;
                 }
