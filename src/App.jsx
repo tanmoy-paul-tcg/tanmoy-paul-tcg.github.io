@@ -16,6 +16,9 @@ function App() {
   useEffect(() => {
     const imgs = [
       'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/pfp.jpg',
+      'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/rb.jpeg',
+      'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/nm.jpeg',
+      'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/pj.jpeg',
       'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/offline_1.svg',
       'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/offline_2.svg',
       'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/offline_3.svg',
