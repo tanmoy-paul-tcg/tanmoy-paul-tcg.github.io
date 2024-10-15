@@ -41,14 +41,11 @@ function Research() {
           <Card>
             <Card.Body>
               <Card.Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit 
-                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                occaecat cupidatat non proident, sunt in culpa qui 
-                officia deserunt mollit anim id est laborum.
+                Our group is focused on developing neural network based machine learning models
+                for prediction of material properties and novel materials. Variational autoencoders
+                have shown the potential for predicting new material composition and structures. Our 
+                objctive deals with creating neural nets those can efficiently work with the tiny data 
+                material science has.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -105,14 +102,11 @@ function Research() {
           <Card>
             <Card.Body>
               <Card.Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit 
-                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                occaecat cupidatat non proident, sunt in culpa qui 
-                officia deserunt mollit anim id est laborum.
+                To better predict the efficiency and life of an electrochemical cell 
+                it is necessary to understand the recation dynamics; reactions in interface, site reactions, etc. 
+                In order to computationally predict these reactions we carry out extensive MD simulations. 
+                By interpreting the distribution curves from both classical and ab-initio Molecular Dynamics one can understand 
+                the progression of any chemical reaction. 
               </Card.Text>
             </Card.Body>
           </Card>
