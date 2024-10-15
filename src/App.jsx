@@ -19,9 +19,11 @@ function App() {
       'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/rb.jpeg',
       'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/nm.jpeg',
       'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/pj.jpeg',
-      'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/offline_1.svg',
-      'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/offline_2.svg',
-      'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/offline_3.svg',
+      'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/bmd.png',
+      'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/mlff.png',
+      'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/mlnn.webp',
+      'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/esc.png',
+      'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/rds.png',
       'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/offline_4.svg',
       'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/offline_5.svg'
     ];
