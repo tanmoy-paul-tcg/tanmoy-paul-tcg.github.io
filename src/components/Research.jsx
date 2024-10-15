@@ -12,7 +12,7 @@ function Research() {
       </Row>
       <hr className="my-4" />
       <Row>
-        <h2 className="mt-4">Battery Materials Modelling</h2>
+        <h2 className="mt-4">Battery Materials Discovery</h2>
         <Col md={4}>
           <Image src={place} className="res-img mb-2"/>
         </Col>
@@ -20,14 +20,13 @@ function Research() {
           <Card>
             <Card.Body>
               <Card.Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit 
-                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                occaecat cupidatat non proident, sunt in culpa qui 
-                officia deserunt mollit anim id est laborum.
+              Cathode material discovery involves the employment of the Density Functional Theory (DFT)
+              via packages such as VASP integrated with machine learning to concoct some promising candidate
+              materials that can be used as cathodes in Na/Li-ion batteries. Our group has addressed the 
+              unique problem of predicting the properties of non-stoichimetric compounds. The work involves 
+              running DFT simulations to calculate crystal structures, stability, etc. At the same time, 
+              the ML model is trained on data acquired from sources such as Materials Project and ICSD. 
+              Using ML reduces the time and resources required. 
               </Card.Text>
             </Card.Body>
           </Card>
@@ -64,14 +63,12 @@ function Research() {
           <Card>
             <Card.Body>
               <Card.Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit 
-                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                occaecat cupidatat non proident, sunt in culpa qui 
-                officia deserunt mollit anim id est laborum.
+              The development of machine learning force fields is a 
+              game-changer technique for running the quantum simulation 
+              at the cost of classical. We generate data by running 
+              Ab-initio Molecular Dynamics (AIMD) and use machine learning 
+              algorithms to fit a Moment Tensor Potential (MTP), which can 
+              then be independently used for running Molecular Dynamics Simulation.
               </Card.Text>
             </Card.Body>
           </Card>
