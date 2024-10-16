@@ -30,8 +30,7 @@ function App() {
       'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/car4.png',
       'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/car5.png',
       'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/car6.png',
-      'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/car7.png',
-      'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/offline_4.svg'
+      'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/car7.png'
     ];
 
     cacheImages(imgs);
