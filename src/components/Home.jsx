@@ -5,6 +5,7 @@ import Bio from "./Bio";
 import Buttons from "./Buttons";
 import Typewriter from "typewriter-effect";
 import Caro from "./Caro";
+import Gallery from "./Gallery";
 
 function Home() {
   return (
@@ -80,6 +81,7 @@ function Home() {
         </ListGroup>
         </Col>
       </Row>
+        <Gallery />
       <style>
        {`
        .col-lg-4 {
