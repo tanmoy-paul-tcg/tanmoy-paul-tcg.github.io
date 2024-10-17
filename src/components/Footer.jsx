@@ -33,9 +33,9 @@ function Footer() {
                     <br/>
                     E-mail:
                     <br/>
-                    <a href="mailto:someone@example.com" target="_top">tanmoy.paul@tcgcrest.org</a>
+                    <a href="mailto:tanmoy.paul@tcgcrest.org" target="_top">tanmoy.paul@tcgcrest.org</a>
                     <br/>
-                    <a href="mailto:someone@example.com" target="_top">tanmoy.paul@tcgcrest.org</a>
+                    <a href="mailto:paultanmoy00@gmail.com" target="_top">paultanmoy00@gmail.com</a>
                 </Col>
             </Row>
             <hr className="my-4" />

@@ -60,7 +60,7 @@ function Home() {
         </ListGroup>
         <ListGroup>
           <ListGroup.Item>NVIDIA RTX A5000 GPU</ListGroup.Item>
-          <ListGroup.Item>NVIDIA RTX 3050 GPU</ListGroup.Item>
+          <ListGroup.Item>NVIDIA RTX 4060 GPU</ListGroup.Item>
           <ListGroup.Item>AMD EPIC 7453 CPU</ListGroup.Item>
           <ListGroup.Item>
             Intel Xeon Cascadelake 8268 CPU <br/>

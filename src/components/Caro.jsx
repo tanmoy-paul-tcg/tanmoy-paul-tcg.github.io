@@ -76,7 +76,7 @@ function Caro() {
 
         .carousel-caption h1 {
             color: var(--primary-color) !important;
-            font-size: 60px;
+            font-size: 200%;
         }
 
         .carousel-indicators {
