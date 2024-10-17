@@ -46,24 +46,24 @@ const Contact = () => {
       <Row>
         <Form id="contact-form" name="google-sheet" onSubmit={handleSubmit}>
           <Form.Group className="mb-3">
-            <Form.Label>Name</Form.Label>
+            <Form.Label>Your name</Form.Label>
             <Form.Control 
               type="text" 
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Enter full name" 
+              placeholder="Enter your full name" 
               required 
             />
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form.Label>Email address</Form.Label>
+            <Form.Label>Your email address</Form.Label>
             <Form.Control 
               type="email" 
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="name@example.com" 
+              placeholder="someone@example.com" 
               required 
             />
           </Form.Group>
@@ -75,7 +75,7 @@ const Contact = () => {
               rows={3}
               value={formData.message}
               onChange={handleChange}
-              placeholder="Enter your message" 
+              placeholder="Enter your message for Dr.Tanmoy Paul" 
               required 
             />
           </Form.Group>
