@@ -681,7 +681,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
         .carousel-caption h1 {
             color: var(--primary-color) !important;
-            font-size: 60px;
+            font-size: 200%;
         }
 
         .carousel-indicators {
@@ -977,7 +977,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 margin-left: 4px;
               }
             }
-          `})]})})}const Wx="/assets/tcg-DwCK_ldt.svg";function Hx(){return f.jsx("footer",{className:"footer",children:f.jsxs(Pt,{children:[f.jsxs(Ee,{children:[f.jsx(ne,{sm:4,className:"footer-cols mb-3",children:f.jsx("a",{href:"https:www.tcgcrest.org",children:f.jsx(Dt,{src:Wx,className:"footer-img"})})}),f.jsxs(ne,{sm:4,className:"footer-cols mb-3",children:[f.jsx("span",{className:"sec",children:"Address"}),f.jsx("br",{}),"Office:",f.jsx("br",{}),"First Floor, Tower 1, Bengal Eco Intelligent Park (Techna), Block EM, Plot No 3, Sector V, Salt lake, Kolkata 700091, West Bengal, INDIA",f.jsx("br",{}),f.jsx("br",{}),"Laboratory:",f.jsx("br",{}),"Third Floor, Delta Building, Bengal Intelligent Park, Street No. 18, Block EP, Sector V, Salt lake, Kolkata 700091, West Bengal, INDIA"]}),f.jsxs(ne,{sm:4,className:"footer-cols mb-3",children:[f.jsx("span",{className:"sec",children:"Contact"}),f.jsx("br",{}),"E-mail:",f.jsx("br",{}),f.jsx("a",{href:"mailto:someone@example.com",target:"_top",children:"tanmoy.paul@tcgcrest.org"}),f.jsx("br",{}),f.jsx("a",{href:"mailto:someone@example.com",target:"_top",children:"tanmoy.paul@tcgcrest.org"})]})]}),f.jsx("hr",{className:"my-4"}),f.jsx(Ee,{children:f.jsxs("p",{children:[f.jsx("span",{className:"sec",children:"©"})," 2024 Pritish Joshi",f.jsx("br",{}),f.jsx("br",{}),"Written in ",f.jsx(Ce,{icon:_x})," & ",f.jsx(Ce,{icon:jx})]})}),f.jsx("style",{children:`
+          `})]})})}const Wx="/assets/tcg-DwCK_ldt.svg";function Hx(){return f.jsx("footer",{className:"footer",children:f.jsxs(Pt,{children:[f.jsxs(Ee,{children:[f.jsx(ne,{sm:4,className:"footer-cols mb-3",children:f.jsx("a",{href:"https:www.tcgcrest.org",children:f.jsx(Dt,{src:Wx,className:"footer-img"})})}),f.jsxs(ne,{sm:4,className:"footer-cols mb-3",children:[f.jsx("span",{className:"sec",children:"Address"}),f.jsx("br",{}),"Office:",f.jsx("br",{}),"First Floor, Tower 1, Bengal Eco Intelligent Park (Techna), Block EM, Plot No 3, Sector V, Salt lake, Kolkata 700091, West Bengal, INDIA",f.jsx("br",{}),f.jsx("br",{}),"Laboratory:",f.jsx("br",{}),"Third Floor, Delta Building, Bengal Intelligent Park, Street No. 18, Block EP, Sector V, Salt lake, Kolkata 700091, West Bengal, INDIA"]}),f.jsxs(ne,{sm:4,className:"footer-cols mb-3",children:[f.jsx("span",{className:"sec",children:"Contact"}),f.jsx("br",{}),"E-mail:",f.jsx("br",{}),f.jsx("a",{href:"mailto:tanmoy.paul@tcgcrest.org",target:"_top",children:"tanmoy.paul@tcgcrest.org"}),f.jsx("br",{}),f.jsx("a",{href:"mailto:paultanmoy00@gmail.com",target:"_top",children:"paultanmoy00@gmail.com"})]})]}),f.jsx("hr",{className:"my-4"}),f.jsx(Ee,{children:f.jsxs("p",{children:[f.jsx("span",{className:"sec",children:"©"})," 2024 Pritish Joshi",f.jsx("br",{}),f.jsx("br",{}),"Written in ",f.jsx(Ce,{icon:_x})," & ",f.jsx(Ce,{icon:jx})]})}),f.jsx("style",{children:`
                 .footer {
                     background-color: var(--primary-color);
                     color: var(--tertiary-color);
