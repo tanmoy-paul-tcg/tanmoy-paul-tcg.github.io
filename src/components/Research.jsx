@@ -1,5 +1,7 @@
 import React from "react";
 import { Image , Container, Row, Col, Card } from "react-bootstrap";
+import pos1 from "../images/pos1.jpg";
+import pos2 from "../images/pos2.jpg";
 
 function Research() {
   return (
@@ -11,7 +13,7 @@ function Research() {
       </Row>
       <hr className="my-4" />
       <Row>
-        <h2 className="mt-4">Battery Materials Discovery</h2>
+        <h2 className="mt-4">Battery Materials Discovery :</h2>
         <Col md={4}>
           <Image src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/bmd.png' className="res-img mb-2"/>
         </Col>
@@ -32,7 +34,7 @@ function Research() {
         </Col>
       </Row>
       <Row>
-        <h2 className="mt-4">Machine Learning & Neural Networks</h2>
+        <h2 className="mt-4">Machine Learning & Neural Networks :</h2>
         <Col md={4}>
           <Image src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/mlnn.webp' className="res-img mb-2"/>
         </Col>
@@ -53,7 +55,7 @@ function Research() {
         </Col>
       </Row>
       <Row>
-        <h2 className="mt-4">Machine Learning Force Fields</h2>
+        <h2 className="mt-4">Machine Learning Force Fields :</h2>
         <Col md={4}>
           <Image src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/mlff.png' className="res-img mb-2"/>
         </Col>
@@ -76,7 +78,7 @@ function Research() {
         </Col>
       </Row>
       <Row>
-        <h2 className="mt-4">Electronic Structure Studies</h2>
+        <h2 className="mt-4">Electronic Structure Studies :</h2>
         <Col md={4}>
           <Image src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/esc.png' className="res-img mb-2"/>
         </Col>
@@ -99,7 +101,7 @@ function Research() {
         </Col>
       </Row>
       <Row>
-        <h2 className="mt-4">Reaction Dynamics Studies</h2>
+        <h2 className="mt-4">Reaction Dynamics Studies :</h2>
         <Col md={4}>
           <Image src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/rds.png' className="res-img mb-2"/>
         </Col>
@@ -120,6 +122,16 @@ function Research() {
             </Card.Body>
           </Card>
         </Col>
+      </Row>
+      <hr className="my-4" />
+      <Row>
+        <h2>Presented Posters :</h2>
+      </Row>
+      <Row className="my-2">
+        <Image src={pos1} className="poster-img" fluid />
+      </Row>
+      <Row className="my-2">
+        <Image src={pos2} className="poster-img" fluid />
       </Row>
       <style>
         {`
@@ -144,6 +156,7 @@ function Research() {
             border-radius: 10px;
             width: 100%;
             height: 270px;
+            border: 0.5px solid #9ed203;
           }
           
           .card-text {
@@ -154,6 +167,13 @@ function Research() {
           .card:hover {
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
           }
+
+          .poster-img {
+            border-radius: 20px;
+            padding: 10px;
+            border: 1px solid #9ed203;
+          }
+
           @media (max-width: 767px) {
             .card {
                 height: var(--bs-card-height);
