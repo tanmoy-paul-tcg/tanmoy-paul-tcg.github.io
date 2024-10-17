@@ -50,6 +50,13 @@ function Gallery() {
                 {`
                     .gallery-img {
                         border-radius: 10px;
+                        -webkit-transition: all 0.5s linear;
+                        -o-transition: all 0.5s linear;
+                        transition: all 0.5s linear;
+                    }
+
+                    .gallery-img:hover {
+                        -webkit-filter: drop-shadow(0px 0px 20px rgba(158, 210, 3, 0.8));
                     }
                 `}
             </style>

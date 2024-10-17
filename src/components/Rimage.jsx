@@ -16,6 +16,9 @@ function Rimage() {
             width: 80%;
             height: 80%;
             border: 12px solid var(--primary-color);
+            -webkit-transition: all 0.5s linear;
+            -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
           }
 
           .rounded-circle:hover {
