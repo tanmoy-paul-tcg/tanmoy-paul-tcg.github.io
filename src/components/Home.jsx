@@ -60,9 +60,18 @@ function Home() {
           <ListGroup.Item className="lg-head">Machines</ListGroup.Item>
         </ListGroup>
         <ListGroup>
-          <ListGroup.Item>NVIDIA RTX A5000 GPU</ListGroup.Item>
-          <ListGroup.Item>NVIDIA RTX 4060 GPU</ListGroup.Item>
-          <ListGroup.Item>AMD EPIC 7453 CPU</ListGroup.Item>
+          <ListGroup.Item>
+            NVIDIA RTX A5000 GPU <br/>
+            24 GB Graphics Memory
+          </ListGroup.Item>
+          <ListGroup.Item>
+            NVIDIA RTX 4060 GPU <br/>
+            8 GB DDR6 Graphics Memory
+          </ListGroup.Item>
+          <ListGroup.Item>
+            AMD EPIC 7453 CPU <br/>
+            256 GB DDR5 Memory | 56 Cores   
+          </ListGroup.Item>
           <ListGroup.Item>
             Intel Xeon Cascadelake 8268 CPU <br/>
             PARAM Brahma <br/>
@@ -70,13 +79,10 @@ function Home() {
           </ListGroup.Item>
           <ListGroup.Item>
             Intel Xeon Skylake 6148 CPU <br/>
-            PARAM Shakti <br/>
-            (IIT Kharagpur)
           </ListGroup.Item>
           <ListGroup.Item>
             Intel Xeon Gold 6130 CPU <br/>
             Tetralith <br/>
-            (Linköping University)
           </ListGroup.Item>
         </ListGroup>
         </Col>
