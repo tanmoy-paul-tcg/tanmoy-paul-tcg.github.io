@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Image, Row, Col, Card, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogleScholar } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -114,6 +114,59 @@ function Team() {
                   <FontAwesomeIcon icon={faLinkedin} />
                 </Button>
               </div>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+      <hr className="my-4" />
+      <h2 className="mt-4">Research Interests</h2>
+      <Row>
+        <Col md={4}>
+          <Image src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/esc.png' className="res-img mb-2"/>
+        </Col>
+        <Col md={8}>
+          <Card>
+            <Card.Body>
+              <Card.Text>
+                <span className="sec">Rajdeep Boral</span> is on holiday.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={4}>
+          <Image src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/esc.png' className="res-img mb-2"/>
+        </Col>
+        <Col md={8}>
+          <Card>
+            <Card.Body>
+              <Card.Text>
+                Nishant Mishra's research interest lies on computational material discovery using DFT and Machine Learning(ML). He is also working on
+                construction of Machine Learning Interatomic Potential to study interface rections of Solid Electrolyte interfaces. 
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={4}>
+          <Image src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/esc.png' className="res-img mb-2"/>
+        </Col>
+        <Col md={8}>
+          <Card>
+            <Card.Body>
+              <Card.Text>
+                The study of electronic structure, including the distribution of 
+                electronic states and spin configurations, is crucial for 
+                understanding the behavior of battery materials such as cathodes and 
+                solid electrolytes. A material's suitability for energy storage relies 
+                heavily on its electronic properties, such as the presence of a band-gap, 
+                which determines ionic conductivity and stability. Through advanced Density 
+                Functional Theory (DFT) calculations, we analyze electronic density, band structures, 
+                and charge transfer, ensuring that materials predicted by neural networks are viable 
+                candidates for battery applications with optimal performance and stability.
+              </Card.Text>
             </Card.Body>
           </Card>
         </Col>
