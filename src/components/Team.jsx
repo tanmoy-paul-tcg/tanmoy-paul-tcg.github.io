@@ -185,6 +185,22 @@ function Team() {
           </Card>
         </Col>
       </Row>
+      <hr className="my-4" />
+      <h2 className="mt-4 blinking-text">Join the team!</h2>
+      <Row>
+        <p>
+          We are actively on the lookout for motivated <span className="sec">students </span>and <span className="sec">post-docs </span>to join our group!
+          <br/>
+          <h4 className="sec">Prospective students:</h4>
+          If you would like to work with us, please write to the PI. PhD admissions usually have to go through the procedures setup by <span className="sec">AcSIR</span>, followed by an interview with the <span className="sec">TCG CREST </span>department. 
+          Prospective Post-doctoral researchers:
+          Please write to the PI to discuss possibilities. Listed below are some of the fellowship opportunities that post-docs joining IISc typically avail.
+          <ul>
+            <li>National Post Doctoral Fellowship: Science and Engineering</li>
+            <li>UGC D.S. Kothari Fellowships</li>
+          </ul>
+        </p>
+      </Row>
       <style>
         {`
           h1 {
@@ -260,6 +276,16 @@ function Team() {
           
           .int:hover {
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          }
+
+          @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+          }
+
+          .blinking-text {
+            animation: blink 1s infinite;
           }
 
           @media (max-width: 767px) {
