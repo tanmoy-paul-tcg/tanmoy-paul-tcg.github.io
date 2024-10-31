@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogleScholar } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import rajdeep from "../images/rajdeep.jpg";
+import nishant from "../images/nishant.jpg";
+import pritish from "../images/pritish.jpg";
 
 function Team() {
   return (
@@ -20,7 +23,7 @@ function Team() {
             <Card.Img variant="top" src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/rb.jpeg' alt="Card cap" />
             <Card.Body>
               <Card.Title>Rajdeep Boral</Card.Title>
-              <Card.Text className="card-text">
+              <Card.Text className="c-text">
                 Doctoral Candidate
               </Card.Text>
               <div className="button-container">
@@ -54,7 +57,7 @@ function Team() {
             <Card.Img variant="top" src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/nm.jpeg' alt="Card cap" />
             <Card.Body>
               <Card.Title>Nishant Mishra</Card.Title>
-              <Card.Text className="card-text">
+              <Card.Text className="c-text">
                 Project Associate
               </Card.Text>
               <div className="button-container">
@@ -88,7 +91,7 @@ function Team() {
             <Card.Img variant="top" src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/pj.jpeg' alt="Card cap" />
             <Card.Body>
               <Card.Title>Pritish Joshi</Card.Title>
-              <Card.Text className="card-text">
+              <Card.Text className="c-text">
                 Project Associate
               </Card.Text>
               <div className="button-container">
@@ -122,13 +125,21 @@ function Team() {
       <h2 className="mt-4">Research Interests</h2>
       <Row>
         <Col md={4}>
-          <Image src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/esc.png' className="res-img mb-2"/>
+          <Image src={rajdeep} className="res-img my-2" fluid/>
         </Col>
         <Col md={8}>
-          <Card>
+          <Card className="int my-2">
             <Card.Body>
               <Card.Text>
-                <span className="sec">Rajdeep Boral</span> is on holiday.
+                <span className="sec">Rajdeep Boral</span> has a background in Theoretical Condensed Matter Physics. He completed his Master's degree at Ramakrishna Mission Residential College.
+                <br/>
+                His research interests center on the design of battery materials, specifically examining their electronic and magnetic properties in strongly correlated systems.
+                <br/>
+                Rajdeep employs Density Functional Theory (DFT) and Machine Learning (ML) to explore these complex materials. 
+                <br/>
+                In addition, he is developing machine-learning-based force fields to reduce the reliance on computationally expensive ab initio Molecular Dynamics (AIMD) simulations.
+                <br/>
+                Rajdeep joined TCG Crest in 2023 as a Junior Research Fellow.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -136,14 +147,19 @@ function Team() {
       </Row>
       <Row>
         <Col md={4}>
-          <Image src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/esc.png' className="res-img mb-2"/>
+          <Image src={nishant} className="res-img my-2" fluid/>
         </Col>
         <Col md={8}>
-          <Card>
+          <Card className="int my-2">
             <Card.Body>
               <Card.Text>
-                Nishant Mishra's research interest lies on computational material discovery using DFT and Machine Learning(ML). He is also working on
-                construction of Machine Learning Interatomic Potential to study interface rections of Solid Electrolyte interfaces. 
+              <span className="sec">Nishant Mishra</span> has a background in Physics. He did his Master's from National Institute of Technology Silchar.
+                <br/>
+                His research interest lies on computational material discovery using DFT and Machine Learning (ML).
+                <br/>
+                He is also working on construction of Machine Learning Interatomic Potential to study rection dynamics of Solid Electrolyte interfaces. 
+                <br/>
+                He has been working with TCG CREST since 2023 and will soon be joining PennState University for a Doctoral programme.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -151,21 +167,19 @@ function Team() {
       </Row>
       <Row>
         <Col md={4}>
-          <Image src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/esc.png' className="res-img mb-2"/>
+          <Image src={pritish} className="res-img my-2" fluid/>
         </Col>
         <Col md={8}>
-          <Card>
+          <Card className="int my-2">
             <Card.Body>
               <Card.Text>
-                The study of electronic structure, including the distribution of 
-                electronic states and spin configurations, is crucial for 
-                understanding the behavior of battery materials such as cathodes and 
-                solid electrolytes. A material's suitability for energy storage relies 
-                heavily on its electronic properties, such as the presence of a band-gap, 
-                which determines ionic conductivity and stability. Through advanced Density 
-                Functional Theory (DFT) calculations, we analyze electronic density, band structures, 
-                and charge transfer, ensuring that materials predicted by neural networks are viable 
-                candidates for battery applications with optimal performance and stability.
+              <span className="sec">Pritish Joshi</span> has a background in Computational Chemistry and Biophysics. He did his Master's from Indian Institute of Technology Dhanbad.
+                <br/>
+                His research interest lies on Inverse material design for cathodes using Deep Neural Networks and DFT studies.
+                <br/>
+                He is also studying rection dynamics of Solid Electrolyte Interfaces using ab initio Molecular Dynamics (AIMD). 
+                <br/>
+                He joined TCG Crest in 2024 and has previously worked on Computational drug discovery using Machine Learning (ML) and Classical Molecular Dynamics (CMD).
               </Card.Text>
             </Card.Body>
           </Card>
@@ -176,6 +190,10 @@ function Team() {
           h1 {
             font-size: 50px;
             font-weight: bold;
+          }
+
+          h2 {
+            color: var(--secondary-color);
           }
 
           .card-img-top {
@@ -198,7 +216,7 @@ function Team() {
             font-weight: bold;
           }
           
-          .card-text {
+          .c-text {
             text-align: center;
             color: var(--secondary-color);
             font-size: 18px;
@@ -209,7 +227,7 @@ function Team() {
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
           }
 
-        .button-container {
+          .button-container {
             width: 100%;
             margin-top: 20px;
             display: flex;
@@ -220,11 +238,38 @@ function Team() {
             border-radius: 50px;
           }
 
+          .int {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            border-radius: 10px;
+            height: 270px;
+            overflow: auto;
+          }
+          
+          .res-img {
+            border-radius: 10px;
+            width: 100%;
+            height: 270px;
+            border: 0.5px solid #9ed203;
+          }
+          
+          .int .card-text {
+            font-size: 18px;
+            line-height: 1.5;
+          }
+          
+          .int:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          }
+
           @media (max-width: 767px) {
             .button-container {
               display: flex;
               justify-content: center;
             }
+
+            .int {
+                height: var(--bs-card-height);
           }
         `}
       </style>
