@@ -193,12 +193,8 @@ function Team() {
           <br/>
           <h4 className="sec">Prospective students:</h4>
           If you would like to work with us, please write to the PI. PhD admissions usually have to go through the procedures setup by <span className="sec">AcSIR</span>, followed by an interview with the <span className="sec">TCG CREST </span>department. 
-          Prospective Post-doctoral researchers:
-          Please write to the PI to discuss possibilities. Listed below are some of the fellowship opportunities that post-docs joining IISc typically avail.
-          <ul>
-            <li>National Post Doctoral Fellowship: Science and Engineering</li>
-            <li>UGC D.S. Kothari Fellowships</li>
-          </ul>
+          <h4 className="sec">Prospective Post-doctoral researchers:</h4>
+          Please write to the PI along with your CV to discuss possibilities. Post-doctoral fellows usually get institutional funding, however projects occasionally provide financing as well.
         </p>
       </Row>
       <style>
