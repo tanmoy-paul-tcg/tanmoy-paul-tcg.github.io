@@ -15,7 +15,7 @@ function Caro() {
       <Carousel.Item>
       <CarouselImage pic='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/car1.png' />
         <Carousel.Caption>
-            <h1>Computational Facilities</h1>
+            <h1>The Team</h1>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -33,7 +33,7 @@ function Caro() {
       <Carousel.Item>
       <CarouselImage pic='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/car4.png' />
         <Carousel.Caption>
-            <h1>Classroom Facilities</h1>
+            <h1>Computational Facilities</h1>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -45,11 +45,17 @@ function Caro() {
       <Carousel.Item>
       <CarouselImage pic='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/car6.png' />
         <Carousel.Caption>
-            <h1>And much more...</h1>
+            <h1>Classroom Facilities</h1>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
       <CarouselImage pic='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/car7.png' />
+        <Carousel.Caption>
+            <h1>And much more...</h1>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+      <CarouselImage pic='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/car8.png' />
         <Carousel.Caption>
             <h1>And much more...</h1>
         </Carousel.Caption>
