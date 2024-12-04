@@ -6,10 +6,14 @@ import Buttons from "./Buttons";
 import Typewriter from "typewriter-effect";
 import Caro from "./Caro";
 import Gallery from "./Gallery";
+import Marquee from "./Marquee";
 
 function Home() {
   return (
     <Container>
+      <Row className="mb-4">
+        <Marquee />
+      </Row>
       <Row>
         <Col lg={4}>
         <Rimage />
