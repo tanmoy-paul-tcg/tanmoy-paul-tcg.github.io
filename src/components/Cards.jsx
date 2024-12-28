@@ -5,9 +5,9 @@ import data from "../pubs.json";
 function Cards() {
   return data.map((item, index) => (
     <Col lg={12} className="mb-4" key={index}>
-      <Card>
+      <Card className="pub-card">
         <Card.Body>
-          <Card.Title>{item.title}</Card.Title>
+          <a href={item.link} target="_blank"><Card.Title>{item.title}</Card.Title></a>
           <Card.Text>
             {item.authors}
             <br/>
@@ -29,6 +29,7 @@ function Cards() {
         }
         
         .card-title {
+          color: var(--bs-body-color);
           font-size: 24px;
           font-weight: bold;
         }
@@ -41,6 +42,14 @@ function Cards() {
         
         .card:hover {
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .pub-card a {
+          text-decoration: none;
+        }
+
+        .pub-card a:hover {
+          text-shadow: 0 0 5px var(--secondary-color);
         }
         `}
       </style>
