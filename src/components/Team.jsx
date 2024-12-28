@@ -54,40 +54,6 @@ function Team() {
         </Col>
         <Col lg={4} md={6} className="mb-4">
           <Card>
-            <Card.Img variant="top" src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/nm.jpeg' alt="Card cap" />
-            <Card.Body>
-              <Card.Title>Nishant Mishra</Card.Title>
-              <Card.Text className="c-text">
-                Project Associate
-              </Card.Text>
-              <div className="button-container">
-                <Button
-                  variant="primary"
-                  href="https://github.com/nishantaMishra"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faGithub} />
-                </Button>
-                <Button
-                  variant="primary"
-                  href="#"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faGoogleScholar} />
-                </Button>
-                <Button
-                  variant="primary"
-                  href="https://www.linkedin.com/in/%E0%A4%A8%E0%A4%BF%E0%A4%B6%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%A4-%E0%A4%AE%E0%A4%BF%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A4%BE"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faLinkedin} />
-                </Button>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col lg={4} md={6} className="mb-4">
-          <Card>
             <Card.Img variant="top" src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/pj.jpeg' alt="Card cap" />
             <Card.Body>
               <Card.Title>Pritish Joshi</Card.Title>
@@ -120,6 +86,40 @@ function Team() {
             </Card.Body>
           </Card>
         </Col>
+        <Col lg={4} md={6} className="mb-4">
+          <Card>
+            <Card.Img variant="top" src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/nm.jpeg' alt="Card cap" />
+            <Card.Body>
+              <Card.Title>Nishant Mishra</Card.Title>
+              <Card.Text className="c-text">
+                Alumnus (PhD: Penn State, USA)
+              </Card.Text>
+              <div className="button-container">
+                <Button
+                  variant="primary"
+                  href="https://github.com/nishantaMishra"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={faGithub} />
+                </Button>
+                <Button
+                  variant="primary"
+                  href="#"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={faGoogleScholar} />
+                </Button>
+                <Button
+                  variant="primary"
+                  href="https://www.linkedin.com/in/%E0%A4%A8%E0%A4%BF%E0%A4%B6%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%A4-%E0%A4%AE%E0%A4%BF%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A4%BE"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </Button>
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
       </Row>
       <hr className="my-4" />
       <h2 className="mt-4">Research Interests</h2>
@@ -140,26 +140,6 @@ function Team() {
                 In addition, he is developing machine-learning-based force fields to reduce the reliance on computationally expensive ab initio Molecular Dynamics (AIMD) simulations.
                 <br/>
                 Rajdeep joined TCG Crest in 2023 as a Junior Research Fellow.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-      <Row>
-        <Col md={4}>
-          <Image src={nishant} className="res-img my-2" fluid/>
-        </Col>
-        <Col md={8}>
-          <Card className="int my-2">
-            <Card.Body>
-              <Card.Text>
-              <span className="sec">Nishant Mishra</span> has a background in Physics. He did his Master's from National Institute of Technology Silchar.
-                <br/>
-                His research interest lies on computational material discovery using DFT and Machine Learning (ML).
-                <br/>
-                He is also working on construction of Machine Learning Interatomic Potential to study rection dynamics of Solid Electrolyte interfaces. 
-                <br/>
-                He has been working with TCG CREST since 2023 and will soon be joining PennState University for a Doctoral programme.
               </Card.Text>
             </Card.Body>
           </Card>
