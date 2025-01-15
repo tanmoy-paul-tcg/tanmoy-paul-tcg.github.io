@@ -3,6 +3,7 @@ import { Image , Container, Row, Col, Card } from "react-bootstrap";
 import pos1 from "../images/pos1.jpg";
 import pos2 from "../images/pos2.jpg";
 import pos3 from "../images/pos3.jpg";
+import pos4 from "../images/pos4.jpg";
 
 function Research() {
   return (
@@ -136,6 +137,9 @@ function Research() {
       </Row>
       <Row className="my-2">
         <Image src={pos3} className="poster-img" fluid />
+      </Row>
+      <Row className="my-2">
+        <Image src={pos4} className="poster-img" fluid />
       </Row>
       <style>
         {`
