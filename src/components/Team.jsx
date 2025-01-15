@@ -5,7 +5,6 @@ import { faGoogleScholar } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import rajdeep from "../images/rajdeep.jpg";
-import nishant from "../images/nishant.jpg";
 import pritish from "../images/pritish.jpg";
 
 function Team() {
@@ -36,7 +35,7 @@ function Team() {
                 </Button>
                 <Button
                   variant="primary"
-                  href="#"
+                  href="https://scholar.google.com/citations?user=sVygeGkAAAAJ&hl=en"
                   target="_blank"
                 >
                   <FontAwesomeIcon icon={faGoogleScholar} />
@@ -104,7 +103,7 @@ function Team() {
                 </Button>
                 <Button
                   variant="primary"
-                  href="#"
+                  href="https://scholar.google.com/citations?hl=hi&user=uSReHc8AAAAJ"
                   target="_blank"
                 >
                   <FontAwesomeIcon icon={faGoogleScholar} />
