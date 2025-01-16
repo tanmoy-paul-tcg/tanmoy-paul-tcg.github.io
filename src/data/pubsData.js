@@ -1,4 +1,4 @@
-[
+export const pubList = [
     {
         "title": "Designing layered oxides as cathodes for sodium-ion batteries: Machine learning and density functional theory based modeling",
         "authors": "N Mishra, R Boral, T Paul",
@@ -307,4 +307,4 @@
         "date": "2013",
         "link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=8YG_SSAAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=8YG_SSAAAAAJ:aqlVkmm33-oC"
     }
-]
+];

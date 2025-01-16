@@ -1,9 +1,9 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
-import data from "../pubs.json";
+import { pubList } from "../data/pubsData";
 
 function Cards() {
-  return data.map((item, index) => (
+  return pubList.map((item, index) => (
     <Col lg={12} className="mb-4" key={index}>
       <Card className="pub-card">
         <Card.Body>

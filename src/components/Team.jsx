@@ -1,167 +1,74 @@
 import React from "react";
 import { Container, Image, Row, Col, Card, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogleScholar } from "@fortawesome/free-brands-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGoogleScholar, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { teamMembers } from "../data/teamData";
 
 function Team() {
   return (
     <Container>
       <Row>
         <Col lg={6}>
-        <h1>Team Members</h1>
+          <h1>Team Members</h1>
         </Col>
       </Row>
       <hr className="my-4" />
       <Row>
-      <Col lg={4} md={6} className="mb-4">
-          <Card>
-            <Card.Img variant="top" src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/rb.jpeg' alt="Card cap" />
-            <Card.Body>
-              <Card.Title>Rajdeep Boral</Card.Title>
-              <Card.Text className="c-text">
-                Doctoral Candidate
-              </Card.Text>
-              <div className="button-container">
-                <Button
-                  variant="primary"
-                  href="https://github.com/WalterWhite1611"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faGithub} />
-                </Button>
-                <Button
-                  variant="primary"
-                  href="https://scholar.google.com/citations?user=sVygeGkAAAAJ&hl=en"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faGoogleScholar} />
-                </Button>
-                <Button
-                  variant="primary"
-                  href="https://www.linkedin.com/in/rajdeep-boral-6621b9213"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faLinkedin} />
-                </Button>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col lg={4} md={6} className="mb-4">
-          <Card>
-            <Card.Img variant="top" src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/pj.jpeg' alt="Card cap" />
-            <Card.Body>
-              <Card.Title>Pritish Joshi</Card.Title>
-              <Card.Text className="c-text">
-                Project Associate
-              </Card.Text>
-              <div className="button-container">
-                <Button
-                  variant="primary"
-                  href="https://github.com/DrtSinX98"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faGithub} />
-                </Button>
-                <Button
-                  variant="primary"
-                  href="https://scholar.google.com/citations?user=jUdY7OcAAAAJ&hl=en"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faGoogleScholar} />
-                </Button>
-                <Button
-                  variant="primary"
-                  href="https://linkedin.com/in/pritish-joshi-b870bb242"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faLinkedin} />
-                </Button>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col lg={4} md={6} className="mb-4">
-          <Card>
-            <Card.Img variant="top" src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/nm.jpeg' alt="Card cap" />
-            <Card.Body>
-              <Card.Title>Nishant Mishra</Card.Title>
-              <Card.Text className="c-text">
-                Alumnus (PhD: Penn State, USA)
-              </Card.Text>
-              <div className="button-container">
-                <Button
-                  variant="primary"
-                  href="https://github.com/nishantaMishra"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faGithub} />
-                </Button>
-                <Button
-                  variant="primary"
-                  href="https://scholar.google.com/citations?hl=hi&user=uSReHc8AAAAJ"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faGoogleScholar} />
-                </Button>
-                <Button
-                  variant="primary"
-                  href="https://www.linkedin.com/in/%E0%A4%A8%E0%A4%BF%E0%A4%B6%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%A4-%E0%A4%AE%E0%A4%BF%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A4%BE"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faLinkedin} />
-                </Button>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
+        {teamMembers.map((member) => (
+          <Col lg={4} md={6} className="mb-4" key={member.name}>
+            <Card>
+              <Card.Img variant="top" src={member.image} alt={`${member.name} profile`} />
+              <Card.Body>
+                <Card.Title>{member.name}</Card.Title>
+                <Card.Text className="c-text">
+                  {member.title}
+                </Card.Text>
+                <div className="button-container">
+                  <Button
+                    variant="primary"
+                    href={member.links.github}
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                  </Button>
+                  <Button
+                    variant="primary"
+                    href={member.links.scholar}
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon icon={faGoogleScholar} />
+                  </Button>
+                  <Button
+                    variant="primary"
+                    href={member.links.linkedin}
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} />
+                  </Button>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
       </Row>
       <hr className="my-4" />
       <h2 className="mt-4">Research Interests</h2>
-      <Row>
-        <Col md={4}>
-          <Image src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/rajdeep.jpg' className="res-img my-2" fluid/>
-        </Col>
-        <Col md={8}>
-          <Card className="int my-2">
-            <Card.Body>
-              <Card.Text>
-                <span className="sec">Rajdeep Boral</span> has a background in Theoretical Condensed Matter Physics. He completed his Master's degree at Ramakrishna Mission Residential College.
-                <br/>
-                His research interests center on the design of battery materials, specifically examining their electronic and magnetic properties in strongly correlated systems.
-                <br/>
-                Rajdeep employs Density Functional Theory (DFT) and Machine Learning (ML) to explore these complex materials. 
-                <br/>
-                In addition, he is developing machine-learning-based force fields to reduce the reliance on computationally expensive ab initio Molecular Dynamics (AIMD) simulations.
-                <br/>
-                Rajdeep joined TCG Crest in 2023 as a Junior Research Fellow.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-      <Row>
-        <Col md={4}>
-          <Image src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/pritish.jpg' className="res-img my-2" fluid/>
-        </Col>
-        <Col md={8}>
-          <Card className="int my-2">
-            <Card.Body>
-              <Card.Text>
-              <span className="sec">Pritish Joshi</span> has a background in Computational Chemistry and Biophysics. He did his Master's from Indian Institute of Technology Dhanbad.
-                <br/>
-                His research interest lies on Inverse material design for cathodes using Deep Neural Networks and DFT studies.
-                <br/>
-                He is also studying rection dynamics of Solid Electrolyte Interfaces using ab initio Molecular Dynamics (AIMD). 
-                <br/>
-                He joined TCG Crest in 2024 and has previously worked on Computational drug discovery using Machine Learning (ML) and Classical Molecular Dynamics (CMD).
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
+      {teamMembers.filter(member => member.research).map((member) => (
+        <Row key={`research-${member.name}`}>
+          <Col md={4}>
+            <Image src={member.research.image} className="res-img my-2" fluid/>
+          </Col>
+          <Col md={8}>
+            <Card className="int my-2">
+              <Card.Body>
+                <Card.Text>
+                  <span className="sec">{member.name}</span> {member.research.description}
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      ))}
       <hr className="my-4" />
       <h2 className="mt-4 blinking-text">Join the team!</h2>
       <Row>
@@ -269,6 +176,7 @@ function Team() {
 
             .int {
                 height: var(--bs-card-height);
+            }
           }
         `}
       </style>
