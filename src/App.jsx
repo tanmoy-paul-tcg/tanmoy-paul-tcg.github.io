@@ -19,6 +19,8 @@ function App() {
       'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/rb.jpeg',
       'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/nm.jpeg',
       'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/pj.jpeg',
+      'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/rajdeep.jpg',
+      'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/pritish.jpg',
       'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/bmd.png',
       'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/mlff.png',
       'https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/mlnn.webp',

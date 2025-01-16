@@ -4,8 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogleScholar } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import rajdeep from "../images/rajdeep.jpg";
-import pritish from "../images/pritish.jpg";
 
 function Team() {
   return (
@@ -124,7 +122,7 @@ function Team() {
       <h2 className="mt-4">Research Interests</h2>
       <Row>
         <Col md={4}>
-          <Image src={rajdeep} className="res-img my-2" fluid/>
+          <Image src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/rajdeep.jpg' className="res-img my-2" fluid/>
         </Col>
         <Col md={8}>
           <Card className="int my-2">
@@ -146,7 +144,7 @@ function Team() {
       </Row>
       <Row>
         <Col md={4}>
-          <Image src={pritish} className="res-img my-2" fluid/>
+          <Image src='https://raw.githubusercontent.com/RISE-Crystals/RISE-Crystals.github.io/main/src/images/pritish.jpg' className="res-img my-2" fluid/>
         </Col>
         <Col md={8}>
           <Card className="int my-2">
