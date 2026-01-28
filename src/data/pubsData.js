@@ -1,5 +1,19 @@
 export const pubList = [
     {
+        "title": "Ab initio study of point defects in disordered solid electrolytes Li3ACl6 (A = Y, Er, In) for all solid-state Li-ion batteries",
+        "authors": "T Paul",
+        "journal": "Physical Review Materials",
+        "date": "2026",
+        "link": "https://journals.aps.org/prmaterials/accepted/10.1103/9bsm-klkq"
+    },
+       {
+        "title": "First-Principles Investigation of Point Defects in Na-Antiperovskite Cathodes",
+        "authors": "A K Das, T Paul",
+        "journal": "Advanced Theory and Simulations",
+        "date": "2026",
+        "link": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adts.202502286"
+    },
+    {
         "title": "Theoretical Design of Na-Rich Antiperovskites as Cathode Material for Sodium-Ion Batteries",
         "authors": "R Boral, T Paul",
         "journal": "ACS Applied Energy Materials",
