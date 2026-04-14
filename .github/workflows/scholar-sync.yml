@@ -1,0 +1,44 @@
+name: Google Scholar Sync
+
+on:
+  schedule:
+    # Run at 00:00 every Sunday
+    - cron: '0 0 * * 0'
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  sync_publications:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Node Dependencies
+        run: npm ci
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Python Dependencies
+        run: |
+          cd scripts/fetch-publications
+          pip install -r requirements.txt
+
+      - name: Fetch from Google Scholar
+        run: |
+          cd scripts/fetch-publications
+          # user=8YG_SSAAAAAJ is Dr. Tanmoy Paul's Google Scholar Profile
+          python fetch_publications.py "https://scholar.google.com/citations?user=8YG_SSAAAAAJ" --output-dir . --no-pdf --no-source --delay 3
+
+      - name: Sync to MongoDB
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+        run: |
+          node scripts/sync-scholar.js
