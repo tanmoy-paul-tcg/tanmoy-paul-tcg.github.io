@@ -132,6 +132,40 @@ const events = [
   }
 ];
 
+const homepage = {
+  bio: {
+    name: "Dr.Tanmoy Paul",
+    title: "Research Scientist",
+    description: "Tanmoy Paul is a research scientist of the Research Institute for Sustainable Energy (RISE) of TCG Centres for Research and Education in Science and Technology (TCG-CREST). Dr. Paul received his B.Sc degree from University of Calcutta with honours in Physics and M.Sc. from Indian Institute of Engineering Science and Technology, Shibpur (formerly Bengal Engineering and Science University) in Applied Physics with a distinction, and his PhD in Science from Indian Association for the Cultivation of Science. Following postdoctoral appointments from Indian Association for the Cultivation of Science, Technion-Israel Institute of Technology, National Taiwan University, Academia Sinica and S N Bose National Centre for Basic Sciences, he joined TCG CREST in August of 2022.",
+    profileImage: "/images/pfp.jpg"
+  },
+  typewriter: ["Welcome to ", "Materials Modelling Laboratory"],
+  catchText: "At the forefront of computational materials science, our lab pioneers the use of advanced computational techniques to design and discover cutting-edge materials for next-generation batteries and energy storage devices. Applying ab initio molecular dynamics, Density Functional Theory (DFT), and advanced methods including machine learning and neural networks, allows us to investigate material behavior at the atomic level. Our interdisciplinary team of computational physicists and chemists pushes the boundaries of materials innovation, leveraging AI/ML-driven models and high-performance simulations to accelerate the discovery of sustainable energy solutions.",
+  machines: [
+    { name: "NVIDIA RTX A5000 GPU", specs: "24 GB Graphics Memory" },
+    { name: "NVIDIA RTX 4060 GPU", specs: "8 GB DDR6 Graphics Memory" },
+    { name: "AMD EPIC 7453 CPU", specs: "256 GB DDR5 Memory | 56 Cores" },
+    { name: "Intel Xeon Cascadelake 8268 CPU", specs: "PARAM Brahma (IISER Pune)" },
+    { name: "Intel Xeon Skylake 6148 CPU", specs: "" },
+    { name: "Intel Xeon Gold 6130 CPU", specs: "Tetralith" }
+  ],
+  carousel: [
+    { pic: "/images/car1.png", caption: "The Team" },
+    { pic: "/images/car2.png", caption: "Computational Facilities" },
+    { pic: "/images/car3.png", caption: "Computational Facilities" },
+    { pic: "/images/car4.png", caption: "Computational Facilities" },
+    { pic: "/images/car5.png", caption: "Classroom Facilities" },
+    { pic: "/images/car6.png", caption: "Classroom Facilities" },
+    { pic: "/images/car7.png", caption: "And much more..." },
+    { pic: "/images/car8.png", caption: "And much more..." }
+  ],
+  gallery: [
+    "/images/gal1.jpg", "/images/gal2.jpg", "/images/gal3.jpg",
+    "/images/gal4.jpg", "/images/gal5.jpg", "/images/gal6.jpg",
+    "/images/gal7.jpg", "/images/gal8.jpg", "/images/gal9.jpeg"
+  ]
+};
+
 async function seed() {
   const client = new MongoClient(uri);
   
@@ -146,6 +180,7 @@ async function seed() {
     await db.collection('posters').deleteMany({});
     await db.collection('marquee').deleteMany({});
     await db.collection('events').deleteMany({});
+    await db.collection('homepage').deleteMany({});
 
     console.log('Seeding publications...');
     await db.collection('publications').insertMany(publications);
@@ -164,6 +199,9 @@ async function seed() {
 
     console.log('Seeding events...');
     await db.collection('events').insertMany(events);
+
+    console.log('Seeding homepage...');
+    await db.collection('homepage').insertOne(homepage);
 
     console.log('✅ Seed complete!');
   } catch (error) {

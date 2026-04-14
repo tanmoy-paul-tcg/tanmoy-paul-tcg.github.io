@@ -1,19 +1,21 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 
-const galleryImages = [
-  "/images/gal1.jpg", "/images/gal2.jpg", "/images/gal3.jpg",
-  "/images/gal4.jpg", "/images/gal5.jpg", "/images/gal6.jpg",
-  "/images/gal7.jpg", "/images/gal8.jpg", "/images/gal9.jpeg",
-];
+function Gallery({ images }) {
+    if (!images || images.length === 0) return null;
 
-function Gallery() {
+    // chunk array into groups of 3
+    const chunks = [];
+    for (let i = 0; i < images.length; i += 3) {
+      chunks.push(images.slice(i, i + 3));
+    }
+
     return(
         <div>
-            {[0, 3, 6].map((start) => (
-              <Row key={start}>
-                {galleryImages.slice(start, start + 3).map((src) => (
-                  <Col lg={4} className="my-2" key={src}>
+            {chunks.map((chunk, rowIdx) => (
+              <Row key={rowIdx}>
+                {chunk.map((src, colIdx) => (
+                  <Col lg={4} className="my-2" key={src + colIdx}>
                     <img src={src} className="gallery-img img-fluid" alt="gallery" />
                   </Col>
                 ))}

@@ -45,6 +45,9 @@ export default function AdminDashboard() {
       <div className="quick-actions">
         <h2>Quick Actions</h2>
         <div className="action-grid">
+          <Link href="/admin/homepage" className="action-card">
+            <span>🏠</span> Edit Homepage
+          </Link>
           <Link href="/admin/advertisement" className="action-card">
             <span>📢</span> Update Advertisement
           </Link>

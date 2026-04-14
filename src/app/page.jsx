@@ -6,16 +6,31 @@ import Caro from "../components/Caro";
 import Gallery from "../components/Gallery";
 import Marquee from "../components/Marquee";
 import TypewriterSection from "../components/TypewriterSection";
-import { getMarquee } from "../lib/db";
+import { getMarquee, getHomepage } from "../lib/db";
 
 export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
   let marqueeData = null;
+  let hp = null;
+  
   try {
     marqueeData = await getMarquee();
+    hp = await getHomepage();
   } catch (e) {
-    console.error('Failed to fetch marquee:', e);
+    console.error('Failed to fetch data:', e);
+  }
+
+  if (!hp) {
+    // Failsafe empty state
+    hp = {
+      bio: {},
+      typewriter: [],
+      catchText: "",
+      machines: [],
+      carousel: [],
+      gallery: []
+    };
   }
 
   return (
@@ -25,69 +40,41 @@ export default async function HomePage() {
       </Row>
       <Row>
         <Col lg={4}>
-          <Rimage />
+          <Rimage src={hp.bio?.profileImage || "/images/pfp.jpg"} />
           <Buttons />
         </Col>
         <Col lg={8}>
-          <Bio />
+          <Bio bio={hp.bio} />
         </Col>
       </Row>
       <hr className="my-4" />
       <Row>
-        <TypewriterSection />
+        <TypewriterSection strings={hp.typewriter} />
         <p className="mt-3 catch">
           <span className="sec">{'{ '}</span>
-          At the forefront of computational materials science, 
-          our lab pioneers the use of advanced computational techniques 
-          to design and discover cutting-edge materials for next-generation 
-          batteries and energy storage devices. 
-          Applying ab initio molecular dynamics, 
-          Density Functional Theory (DFT), and advanced methods 
-          including machine learning and neural networks, 
-          allows us to investigate material behavior at the atomic level.  
-          Our interdisciplinary team of computational physicists and chemists 
-          pushes the boundaries of materials innovation, leveraging AI/ML-driven models 
-          and high-performance simulations to accelerate the discovery of sustainable energy solutions. 
+          {hp.catchText}
           <span className="sec">{' }'}</span>
         </p>
       </Row>
       <Row>
         <Col lg={8} className="my-4">
-          <Caro />
+          <Caro carouselData={hp.carousel} />
         </Col>
         <Col lg={4} className="my-4">
           <ul className="list-group mb-3">
             <li className="list-group-item lg-head">Machines</li>
           </ul>
           <ul className="list-group">
-            <li className="list-group-item">
-              NVIDIA RTX A5000 GPU <br/>
-              24 GB Graphics Memory
-            </li>
-            <li className="list-group-item">
-              NVIDIA RTX 4060 GPU <br/>
-              8 GB DDR6 Graphics Memory
-            </li>
-            <li className="list-group-item">
-              AMD EPIC 7453 CPU <br/>
-              256 GB DDR5 Memory | 56 Cores   
-            </li>
-            <li className="list-group-item">
-              Intel Xeon Cascadelake 8268 CPU <br/>
-              PARAM Brahma <br/>
-              (IISER Pune)
-            </li>
-            <li className="list-group-item">
-              Intel Xeon Skylake 6148 CPU <br/>
-            </li>
-            <li className="list-group-item">
-              Intel Xeon Gold 6130 CPU <br/>
-              Tetralith <br/>
-            </li>
+            {hp.machines?.map((m, i) => (
+              <li className="list-group-item" key={i}>
+                {m.name} <br/>
+                {m.specs}
+              </li>
+            ))}
           </ul>
         </Col>
       </Row>
-      <Gallery />
+      <Gallery images={hp.gallery} />
       <style>{`
         .col-lg-4 {
           justify-content: center;

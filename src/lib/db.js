@@ -144,3 +144,20 @@ export async function deleteEvent(id) {
   const db = await getDb();
   return db.collection('events').deleteOne({ _id: new ObjectId(id) });
 }
+
+// ============ HOMEPAGE ============
+
+export async function getHomepage() {
+  const db = await getDb();
+  return db.collection('homepage').findOne({});
+}
+
+export async function updateHomepage(data) {
+  const db = await getDb();
+  const { _id, ...updateData } = data;
+  return db.collection('homepage').updateOne(
+    {},
+    { $set: updateData },
+    { upsert: true }
+  );
+}

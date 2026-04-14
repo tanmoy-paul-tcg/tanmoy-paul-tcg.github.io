@@ -3,23 +3,16 @@
 import { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 
-const carouselData = [
-  { pic: '/images/car1.png', caption: 'The Team' },
-  { pic: '/images/car2.png', caption: 'Computational Facilities' },
-  { pic: '/images/car3.png', caption: 'Computational Facilities' },
-  { pic: '/images/car4.png', caption: 'Computational Facilities' },
-  { pic: '/images/car5.png', caption: 'Classroom Facilities' },
-  { pic: '/images/car6.png', caption: 'Classroom Facilities' },
-  { pic: '/images/car7.png', caption: 'And much more...' },
-  { pic: '/images/car8.png', caption: 'And much more...' },
-];
 
-function Caro() {
+
+function Caro({ carouselData }) {
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
+
+  if (!carouselData || carouselData.length === 0) return null;
 
   return (
     <div>
