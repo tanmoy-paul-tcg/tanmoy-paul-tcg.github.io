@@ -1,9 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogleScholar } from "@fortawesome/free-brands-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGoogleScholar, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 function Buttons() {
   return (
@@ -29,27 +27,25 @@ function Buttons() {
       >
         <FontAwesomeIcon icon={faLinkedin} />
       </Button>
-      <style>
-        {`
+      <style>{`
+        .button-container {
+          width: 100%;
+          margin-top: 20px;
+          display: flex;
+          justify-content: center;
+        }
+
+        .btn-primary {
+          border-radius: 50px;
+        }
+
+        @media (max-width: 767px) {
           .button-container {
-            width: 100%;
-            margin-top: 20px;
             display: flex;
             justify-content: center;
           }
-
-          .btn-primary {
-            border-radius: 50px;
-          }
-
-          @media (max-width: 767px) {
-            .button-container {
-              display: flex;
-              justify-content: center;
-            }
-          }
-        `}
-      </style>
+        }
+      `}</style>
     </div>
   );
 }

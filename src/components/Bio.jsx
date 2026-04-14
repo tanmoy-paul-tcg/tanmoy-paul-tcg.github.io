@@ -21,33 +21,31 @@ function Bio() {
         Technion-Israel Institute of Technology, National Taiwan University, 
         Academia Sinica and S N Bose National Centre for Basic Sciences, 
         he joined <span className="sec">TCG CREST</span> in August of 2022.</p>
-      <style>
-        {`
-          h1 {
-            font-size: 50px;
-            font-weight: bold;
-          }
+      <style>{`
+        h1 {
+          font-size: 50px;
+          font-weight: bold;
+        }
 
+        .lead {
+          font-size: 17px;
+          font-weight: bold;
+        }
+
+        .sec {
+          color: var(--secondary-color);
+        }
+
+        @media (max-width: 767px) {
           .lead {
-            font-size: 17px;
-            font-weight: bold;
+            text-align: justify;
           }
 
-          .sec {
-            color: var(--secondary-color);
+          .greet {
+            text-align: center;
           }
-
-          @media (max-width: 767px) {
-            .lead {
-              text-align: justify;
-            }
-
-            .greet {
-              text-align: center;
-            }
-          }
-        `}
-      </style>
+        }
+      `}</style>
     </div>
   );
 }

@@ -1,13 +1,16 @@
+'use client';
+
 import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faSun, faMoon} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 function ThemeSwitch() {
-
   const [theme, setTheme] = useState('dark');
+  
   useEffect(() => {
     document.documentElement.setAttribute('data-bs-theme', 'dark');
   }, []);
+  
   const switchTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     document.documentElement.setAttribute('data-bs-theme', newTheme);
@@ -27,8 +30,7 @@ function ThemeSwitch() {
             <FontAwesomeIcon icon={faMoon} />
             <span className="ball"></span>
             </label>
-            <style>
-              {`
+            <style>{`
                 .checkbox {
                   opacity: 0;
                   position: absolute;
@@ -70,8 +72,7 @@ function ThemeSwitch() {
                 .checkbox:checked + .checkbox-label .ball {
                   transform: translateX(24px);
                 }
-              `}
-            </style>
+            `}</style>
         </div>
     );
 }

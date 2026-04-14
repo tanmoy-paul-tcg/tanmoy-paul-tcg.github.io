@@ -1,16 +1,23 @@
+'use client';
+
 import React from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faReact, faBootstrap} from "@fortawesome/free-brands-svg-icons";
-import tcg from "../images/tcg.svg";
+import { Container, Row, Col } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact, faBootstrap } from "@fortawesome/free-brands-svg-icons";
+import { usePathname } from 'next/navigation';
 
 function Footer() {
+  const pathname = usePathname();
+  
+  // Don't show footer on admin pages
+  if (pathname.startsWith('/admin')) return null;
+
   return (
     <footer className="footer">
         <Container>
             <Row>
                 <Col sm={4} className='footer-cols mb-3'>
-                    <a href="https:www.tcgcrest.org"><Image src={tcg} className='footer-img'/></a>
+                    <a href="https://www.tcgcrest.org"><img src="/images/tcg.svg" className='footer-img' alt="TCG CREST"/></a>
                 </Col>
                 <Col sm={4} className='footer-cols mb-3'>
                     <span className='sec'>Address</span>
@@ -44,8 +51,7 @@ function Footer() {
                 <br/>
                 <br/>Written in <FontAwesomeIcon icon={faReact} /> & <FontAwesomeIcon icon={faBootstrap} /></p>
             </Row>
-            <style>
-                {`
+            <style>{`
                 .footer {
                     background-color: var(--primary-color);
                     color: var(--tertiary-color);
@@ -75,7 +81,7 @@ function Footer() {
                 }
 
                 .footer a:hover {
-                    cusror: pointer;
+                    cursor: pointer;
                     font-size: 110%;
                 }
 
@@ -92,8 +98,7 @@ function Footer() {
                         width: 50%;
                     }
                 }
-                `}
-            </style>
+            `}</style>
         </Container>
     </footer>
   );
