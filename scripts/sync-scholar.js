@@ -1,7 +1,11 @@
 const { MongoClient } = require('mongodb');
 const fs = require('fs');
 const path = require('path');
-require('dotenv').config({ path: path.join(__dirname, '..', '.env.local') });
+try {
+  require('dotenv').config({ path: path.join(__dirname, '..', '.env.local') });
+} catch (e) {
+  // Ignored. Useful for GitHub actions which inject MONGODB_URI directly.
+}
 
 async function sync() {
   const uri = process.env.MONGODB_URI;
