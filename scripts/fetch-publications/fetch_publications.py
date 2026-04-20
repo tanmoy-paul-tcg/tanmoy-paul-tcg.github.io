@@ -632,6 +632,15 @@ def main() -> None:
         )
         pg = _make_browser_proxy_generator()
         scholarly.use_proxy(pg, pg)
+    else:
+        print("Headless mode: Initializing FreeProxies to bypass IP blocks...")
+        pg = ProxyGenerator()
+        try:
+            pg.FreeProxies()
+            scholarly.use_proxy(pg)
+            print("Proxies configured successfully.")
+        except Exception as e:
+            print(f"Warning: Could not configure free proxies. Continuing without them. Error: {e}")
 
     # Fetch author profile
     try:
