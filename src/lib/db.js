@@ -166,3 +166,23 @@ export async function updateHomepage(data) {
     { upsert: true }
   );
 }
+
+// ============ MESSAGES ============
+
+export async function getMessages() {
+  const db = await getDb();
+  return db.collection('messages').find({}).sort({ createdAt: -1 }).toArray();
+}
+
+export async function addMessage(data) {
+  const db = await getDb();
+  return db.collection('messages').insertOne({
+    ...data,
+    createdAt: new Date().toISOString()
+  });
+}
+
+export async function deleteMessage(id) {
+  const db = await getDb();
+  return db.collection('messages').deleteOne({ _id: new ObjectId(id) });
+}

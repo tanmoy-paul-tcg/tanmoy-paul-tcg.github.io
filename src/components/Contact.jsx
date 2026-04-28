@@ -20,19 +20,31 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    fetch(scriptURL, {
-      method: 'POST',
-      body: new FormData(document.forms['contact-form']),
-    })
-      .then(response => {
+    try {
+      const response = await fetch('/api/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
         setMessage('Message sent successfully!');
         setTimeout(() => setMessage(''), 5000);
         setFormData({ name: '', email: '', message: '' }); // Reset form
-      })
-      .catch(error => console.error('Error!', error.message));
+      } else {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error!', error);
+      setMessage('Failed to send message. Please try again.');
+      setTimeout(() => setMessage(''), 5000);
+    }
   };
 
   return (

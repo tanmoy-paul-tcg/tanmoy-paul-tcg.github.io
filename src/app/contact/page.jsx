@@ -22,24 +22,31 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const form = new FormData();
-    form.append('name', formData.name);
-    form.append('email', formData.email);
-    form.append('message', formData.message);
+    try {
+      const response = await fetch('/api/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    fetch(scriptURL, {
-      method: 'POST',
-      body: form,
-    })
-      .then(response => {
+      if (response.ok) {
         setMessage('Message sent successfully!');
         setTimeout(() => setMessage(''), 5000);
         setFormData({ name: '', email: '', message: '' });
-      })
-      .catch(error => console.error('Error!', error.message));
+      } else {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error!', error);
+      setMessage('Failed to send message. Please try again.');
+      setTimeout(() => setMessage(''), 5000);
+    }
   };
 
   return (

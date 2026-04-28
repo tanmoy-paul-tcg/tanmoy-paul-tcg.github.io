@@ -12,6 +12,7 @@ const navItems = [
   { href: '/admin/research', label: 'Research', icon: '🔬' },
   { href: '/admin/advertisement', label: 'Advertisement', icon: '📢' },
   { href: '/admin/events', label: 'Events', icon: '🎉' },
+  { href: '/admin/messages', label: 'Messages', icon: '✉️' },
 ];
 
 export default function AdminSidebar() {
