@@ -2,11 +2,16 @@ import { NextResponse } from 'next/server';
 import { getMarquee, updateMarquee } from '../../../lib/db';
 import { isAuthenticated } from '../../../lib/auth';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const marquee = await getMarquee();
-    return NextResponse.json(marquee || { text: '', link: '' });
+    return NextResponse.json(marquee || { text: '', link: '' }, {
+      headers: { 'Cache-Control': 'no-store, max-age=0' },
+    });
   } catch (error) {
+    console.error('GET /api/marquee error:', error);
     return NextResponse.json({ error: 'Failed to fetch marquee' }, { status: 500 });
   }
 }

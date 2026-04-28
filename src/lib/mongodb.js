@@ -7,20 +7,14 @@ if (!process.env.MONGODB_URI) {
 const uri = process.env.MONGODB_URI;
 const options = {};
 
-let client;
 let clientPromise;
 
-if (process.env.NODE_ENV === 'development') {
-  // In development, use a global variable so the client is preserved across hot reloads
-  if (!global._mongoClientPromise) {
-    client = new MongoClient(uri, options);
-    global._mongoClientPromise = client.connect();
-  }
-  clientPromise = global._mongoClientPromise;
-} else {
-  // In production, create a new client for each request
-  client = new MongoClient(uri, options);
-  clientPromise = client.connect();
+// Use globalThis to cache the connection promise across serverless invocations.
+// This works in both development (hot reloads) and production (Vercel serverless).
+if (!globalThis._mongoClientPromise) {
+  const client = new MongoClient(uri, options);
+  globalThis._mongoClientPromise = client.connect();
 }
+clientPromise = globalThis._mongoClientPromise;
 
 export default clientPromise;
