@@ -23,3 +23,16 @@ export async function POST(request) {
     return NextResponse.json({ error: 'Failed to add publication' }, { status: 500 });
   }
 }
+
+export async function DELETE(request) {
+  try {
+    if (!(await isAuthenticated())) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+    const { deleteAllPublications } = await import('../../../lib/db');
+    await deleteAllPublications();
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    return NextResponse.json({ error: 'Failed to delete all publications' }, { status: 500 });
+  }
+}

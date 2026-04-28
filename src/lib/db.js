@@ -33,6 +33,11 @@ export async function deletePublication(id) {
   return db.collection('publications').deleteOne({ _id: new ObjectId(id) });
 }
 
+export async function deleteAllPublications() {
+  const db = await getDb();
+  return db.collection('publications').deleteMany({});
+}
+
 // ============ TEAM ============
 
 export async function getTeamMembers() {

@@ -55,15 +55,26 @@ export default function AdminPublications() {
     fetchData();
   };
 
+  const handleDeleteAll = async () => {
+    if (!confirm('Are you sure you want to delete ALL publications? This action cannot be undone.')) return;
+    await fetch('/api/publications', { method: 'DELETE' });
+    fetchData();
+  };
+
   if (loading) return <div className="admin-loading">Loading...</div>;
 
   return (
     <div>
       <div className="admin-header">
         <h1>Publications</h1>
-        <button className="add-btn" onClick={() => { resetForm(); setShowForm(true); }}>
-          + Add Publication
-        </button>
+        <div className="header-actions">
+          <button className="delete-all-btn" onClick={handleDeleteAll}>
+            Delete All
+          </button>
+          <button className="add-btn" onClick={() => { resetForm(); setShowForm(true); }}>
+            + Add Publication
+          </button>
+        </div>
       </div>
 
       {showForm && (
@@ -124,8 +135,11 @@ export default function AdminPublications() {
         .admin-header h1 { font-size: 28px; color: #e9f3de; margin: 0; }
         .admin-loading { color: #e9f3de; text-align: center; padding: 60px; }
 
+        .header-actions { display: flex; gap: 12px; }
         .add-btn { padding: 10px 20px; background: linear-gradient(135deg, #9ed203, #7ab802); border: none; border-radius: 10px; color: #004D40; font-weight: 600; cursor: pointer; transition: all 0.2s; }
         .add-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 15px rgba(158, 210, 3, 0.3); }
+        .delete-all-btn { padding: 10px 20px; background: rgba(255,107,107,0.1); border: 1px solid rgba(255,107,107,0.3); border-radius: 10px; color: #ff6b6b; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+        .delete-all-btn:hover { background: rgba(255,107,107,0.2); transform: translateY(-1px); }
 
         .form-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(158,210,3,0.15); border-radius: 16px; padding: 28px; margin-bottom: 24px; }
         .form-card h3 { color: #9ed203; margin: 0 0 20px 0; font-size: 20px; }
