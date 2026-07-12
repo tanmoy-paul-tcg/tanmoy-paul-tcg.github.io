@@ -9,7 +9,7 @@ export default function AdminTeam() {
   const [showForm, setShowForm] = useState(false);
   const [editId, setEditId] = useState(null);
   const [form, setForm] = useState({
-    name: '', title: '', image: '',
+    name: '', title: '', image: '', category: 'member',
     links: { github: '', scholar: '', linkedin: '' },
     research: { image: '', description: '' }
   });
@@ -23,7 +23,7 @@ export default function AdminTeam() {
   useEffect(() => { fetchData(); }, []);
 
   const resetForm = () => {
-    setForm({ name: '', title: '', image: '', links: { github: '', scholar: '', linkedin: '' }, research: { image: '', description: '' } });
+    setForm({ name: '', title: '', image: '', category: 'member', links: { github: '', scholar: '', linkedin: '' }, research: { image: '', description: '' } });
     setEditId(null);
     setShowForm(false);
   };
@@ -46,7 +46,7 @@ export default function AdminTeam() {
 
   const handleEdit = (m) => {
     setForm({
-      name: m.name, title: m.title, image: m.image,
+      name: m.name, title: m.title, image: m.image, category: m.category || 'member',
       links: m.links || { github: '', scholar: '', linkedin: '' },
       research: m.research || { image: '', description: '' }
     });
@@ -82,6 +82,13 @@ export default function AdminTeam() {
                 <label>Title / Role</label>
                 <input value={form.title} onChange={e => setForm({...form, title: e.target.value})} required />
               </div>
+            </div>
+            <div className="form-row">
+              <label>Category</label>
+              <select value={form.category} onChange={e => setForm({...form, category: e.target.value})} style={{width:'100%',padding:'10px 14px',background:'rgba(255,255,255,0.06)',border:'1px solid rgba(158,210,3,0.2)',borderRadius:'8px',color:'#e9f3de',fontSize:'14px'}}>
+                <option value="member">Member</option>
+                <option value="alumni">Alumni</option>
+              </select>
             </div>
             <div className="form-row">
               <label>Profile Image</label>
@@ -126,6 +133,7 @@ export default function AdminTeam() {
             <div className="member-info">
               <h4>{m.name}</h4>
               <p>{m.title}</p>
+              <span style={{display:'inline-block',padding:'2px 8px',borderRadius:'4px',fontSize:'11px',fontWeight:600,background:m.category==='alumni'?'rgba(255,165,0,0.15)':'rgba(158,210,3,0.15)',color:m.category==='alumni'?'#ffa500':'#9ed203',border:`1px solid ${m.category==='alumni'?'rgba(255,165,0,0.3)':'rgba(158,210,3,0.3)'}`}}>{m.category==='alumni'?'Alumni':'Member'}</span>
             </div>
             <div className="item-actions">
               <button className="edit-btn" onClick={() => handleEdit(m)}>Edit</button>

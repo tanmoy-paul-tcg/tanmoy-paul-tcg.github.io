@@ -345,6 +345,7 @@ const teamMembers = [
   {
     "name": "Rajdeep Boral",
     "title": "Doctoral Candidate",
+    "category": "member",
     "image": "/images/rb.jpeg",
     "links": {
       "github": "https://github.com/WalterWhite1611",
@@ -357,8 +358,24 @@ const teamMembers = [
     }
   },
   {
+    "name": "Kishan Mali",
+    "title": "Post-doc Fellow",
+    "category": "member",
+    "image": "https://i.ibb.co/Sw2fvLt2/Passpic-K.jpg",
+    "links": {
+      "github": "",
+      "scholar": "",
+      "linkedin": ""
+    },
+    "research": {
+      "image": "",
+      "description": "Dr. Mali was awarded a Ph.D. in 2025 from The Maharaja Sayajirao University of Baroda for his research on the magnetic and catalytic properties of functionalized MXenes. He has experience in Quantum Espresso, Fleur, and SPR-KKR technqiues. He joined the Materials Modelling Lab in June 2026 as a post-doctoral fellow to work on  Berry curvature, Spin-Orbit Coupling (SOC), and correlation-driven transitions to identify Weyl phases and chiral edge modes as these features can be obtained for energy materials. "
+    }
+  },
+  {
     "name": "Pritish Joshi",
-    "title": "Alumnus (PhD: Uppsala University, Sweden)",
+    "title": "Alumnus (Currently Pursuing PhD in Uppsala University)",
+    "category": "alumni",
     "image": "/images/pj.jpeg",
     "links": {
       "github": "https://github.com/DrtSinX98",
@@ -372,12 +389,24 @@ const teamMembers = [
   },
   {
     "name": "Nishant Mishra",
-    "title": "Alumnus (PhD: Penn State, USA)",
+    "title": "Alumnus (Currently pursuing PhD in Penn State, USA)",
+    "category": "alumni",
     "image": "/images/nm.jpeg",
     "links": {
       "github": "https://github.com/nishantaMishra",
       "scholar": "https://scholar.google.com/citations?hl=hi&user=uSReHc8AAAAJ",
       "linkedin": "https://www.linkedin.com/in/%E0%A4%A8%E0%A4%BF%E0%A4%B6%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%A4-%E0%A4%AE%E0%A4%BF%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A4%BE"
+    }
+  },
+  {
+    "name": "Arnab Kumar Das",
+    "title": "Alumnus",
+    "category": "alumni",
+    "image": "https://i.ibb.co/4Z3k662Z/Whats-App-Image-2026-05-07-at-5.jpg",
+    "links": {
+      "github": "",
+      "scholar": "",
+      "linkedin": ""
     }
   }
 ];

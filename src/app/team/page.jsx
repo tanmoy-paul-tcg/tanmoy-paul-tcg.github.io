@@ -10,14 +10,36 @@ export const metadata = {
 };
 
 export default async function TeamPage() {
-  let members = [];
+  let allMembers = [];
   try {
-    members = await getTeamMembers();
+    allMembers = await getTeamMembers();
   } catch (e) {
     console.error('Failed to fetch team:', e);
   }
 
-  members = JSON.parse(JSON.stringify(members));
+  allMembers = JSON.parse(JSON.stringify(allMembers));
+
+  const members = allMembers.filter(m => m.category !== 'alumni');
+  const alumni = allMembers.filter(m => m.category === 'alumni');
+
+  const MemberCard = ({ member }) => (
+    <Col lg={4} md={6} className="mb-4">
+      <div className="card h-100">
+        <div className="card-img-wrapper">
+          <img className="card-img-top" src={member.image} alt={`${member.name} profile`} />
+        </div>
+        <div className="card-body d-flex flex-column">
+          <div className="card-title h5">{member.name}</div>
+          <p className="card-text c-text">
+            {member.title}
+          </p>
+          <div className="mt-auto">
+            <TeamIcons links={member.links} />
+          </div>
+        </div>
+      </div>
+    </Col>
+  );
 
   return (
     <Container>
@@ -29,25 +51,29 @@ export default async function TeamPage() {
       <hr className="my-4" />
       <Row>
         {members.map((member) => (
-          <Col lg={4} md={6} className="mb-4" key={member._id}>
-            <div className="card h-100">
-              <img className="card-img-top" src={member.image} alt={`${member.name} profile`} />
-              <div className="card-body d-flex flex-column">
-                <div className="card-title h5">{member.name}</div>
-                <p className="card-text c-text">
-                  {member.title}
-                </p>
-                <div className="mt-auto">
-                  <TeamIcons links={member.links} />
-                </div>
-              </div>
-            </div>
-          </Col>
+          <MemberCard key={member._id} member={member} />
         ))}
       </Row>
+
+      {alumni.length > 0 && (
+        <>
+          <hr className="my-4" />
+          <Row>
+            <Col lg={6}>
+              <h2 className="alumni-heading">Alumni</h2>
+            </Col>
+          </Row>
+          <Row>
+            {alumni.map((member) => (
+              <MemberCard key={member._id} member={member} />
+            ))}
+          </Row>
+        </>
+      )}
+
       <hr className="my-4" />
       <h2 className="mt-4">Research Interests</h2>
-      {members.filter(member => member.research).map((member) => (
+      {allMembers.filter(member => member.research).map((member) => (
         <Row key={`research-${member._id}`}>
           <Col md={4}>
             <img src={member.research.image} className="res-img my-2 img-fluid" alt={`${member.name} research`} />
@@ -85,7 +111,26 @@ export default async function TeamPage() {
           color: var(--secondary-color);
         }
 
+        .alumni-heading {
+          font-size: 36px;
+          font-weight: bold;
+        }
+
+        .card-img-wrapper {
+          width: 100%;
+          padding-top: 100%; /* 1:1 aspect ratio */
+          position: relative;
+          overflow: hidden;
+          border-radius: 10px 10px 0 0;
+        }
+
         .card-img-top {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
           padding: 5px;
           border-radius: 10px;
         }
