@@ -1,26 +1,17 @@
 'use client';
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { useDarkMode } from "../context/DarkModeContext";
 
 function ThemeButton() {
-  const [theme, setTheme] = useState('dark');
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-bs-theme', 'dark');
-  }, []);
-
-  const switchTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-bs-theme', newTheme);
-    setTheme(newTheme);
-  };
+  const { mode, toggleMode } = useDarkMode();
 
   return (
     <div className="d-lg-none">
-      <button onClick={switchTheme} aria-label="Switch between dark and light mode" className="theme-button">
-        <FontAwesomeIcon icon={theme === 'light' ? faSun : faMoon} />
+      <button onClick={toggleMode} aria-label="Switch between dark and light mode" className="theme-button">
+        <FontAwesomeIcon icon={mode === 'light' ? faSun : faMoon} />
       </button>
       <style>{`
         .theme-button {

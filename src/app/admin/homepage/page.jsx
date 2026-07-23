@@ -3,18 +3,25 @@
 import React, { useState, useEffect } from 'react';
 import ImageUploader from '../../../components/admin/ImageUploader';
 
+const THEMES = [
+  { id: 'classic', name: 'Classic', desc: 'Teal & Lime', colors: ['#004D40', '#9ed203', '#e9f3de'] },
+  { id: 'modern', name: 'Modern', desc: 'Charcoal & Purple', colors: ['#2d3436', '#6c5ce7', '#f5f6fa'] },
+  { id: 'glassy', name: 'Glassy', desc: 'Glass & Cyan', colors: ['#1e3a5f', '#00d2ff', '#e8f4f8'] },
+];
+
 export default function AdminHomepage() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [activeTheme, setActiveTheme] = useState('classic');
+  const [themeSaving, setThemeSaving] = useState(false);
 
   useEffect(() => {
     fetch('/api/homepage')
       .then(res => res.json())
       .then(d => {
         if (Object.keys(d).length === 0) {
-          // Fallback if empty
           setData({
             bio: { name: '', title: '', description: '', profileImage: '' },
             typewriter: [],
@@ -28,7 +35,27 @@ export default function AdminHomepage() {
         }
         setLoading(false);
       });
+    // Fetch current theme
+    fetch('/api/settings')
+      .then(res => res.json())
+      .then(d => setActiveTheme(d.theme || 'classic'))
+      .catch(() => {});
   }, []);
+
+  const saveTheme = async (themeId) => {
+    setThemeSaving(true);
+    setActiveTheme(themeId);
+    try {
+      await fetch('/api/settings', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ theme: themeId }),
+      });
+    } catch (e) {
+      alert('Failed to save theme');
+    }
+    setThemeSaving(false);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -62,6 +89,42 @@ export default function AdminHomepage() {
     <div>
       <h1 className="admin-title">Homepage Editor</h1>
       <p className="admin-subtitle">Update the content, descriptions, and images displayed on the main homepage.</p>
+
+      {/* =============== SITE THEME =============== */}
+      <div className="form-card my-4">
+        <h3>Site Theme</h3>
+        <p style={{color:'rgba(233,243,222,0.6)', fontSize:'13px', margin:'0 0 16px 0'}}>Choose a visual theme for the entire website. This change applies globally for all visitors.</p>
+        <div style={{display:'flex', gap:'16px', flexWrap:'wrap'}}>
+          {THEMES.map(t => (
+            <div
+              key={t.id}
+              onClick={() => saveTheme(t.id)}
+              style={{
+                flex: '1 1 160px',
+                maxWidth: '220px',
+                padding: '16px',
+                borderRadius: '12px',
+                cursor: 'pointer',
+                border: activeTheme === t.id ? '2px solid #9ed203' : '1px solid rgba(255,255,255,0.1)',
+                background: activeTheme === t.id ? 'rgba(158,210,3,0.08)' : 'rgba(255,255,255,0.03)',
+                transition: 'all 0.2s',
+              }}
+            >
+              <div style={{display:'flex', gap:'6px', marginBottom:'10px'}}>
+                {t.colors.map((c, i) => (
+                  <div key={i} style={{width:'28px',height:'28px',borderRadius:'50%',background:c,border:'1px solid rgba(255,255,255,0.2)'}} />
+                ))}
+              </div>
+              <div style={{fontWeight:600, color:'#e9f3de', fontSize:'15px'}}>{t.name}</div>
+              <div style={{color:'rgba(233,243,222,0.5)', fontSize:'12px'}}>{t.desc}</div>
+              {activeTheme === t.id && (
+                <div style={{marginTop:'8px', color:'#9ed203', fontSize:'12px', fontWeight:600}}>✓ Active</div>
+              )}
+            </div>
+          ))}
+        </div>
+        {themeSaving && <div style={{marginTop:'8px', color:'#9ed203', fontSize:'12px'}}>Saving theme...</div>}
+      </div>
 
       <form onSubmit={handleSubmit}>
         

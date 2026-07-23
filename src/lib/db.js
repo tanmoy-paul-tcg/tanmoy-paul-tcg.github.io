@@ -186,3 +186,20 @@ export async function deleteMessage(id) {
   const db = await getDb();
   return db.collection('messages').deleteOne({ _id: new ObjectId(id) });
 }
+
+// ============ SETTINGS ============
+
+export async function getSiteTheme() {
+  const db = await getDb();
+  const doc = await db.collection('settings').findOne({ key: 'siteTheme' });
+  return doc?.value || 'classic';
+}
+
+export async function updateSiteTheme(theme) {
+  const db = await getDb();
+  return db.collection('settings').updateOne(
+    { key: 'siteTheme' },
+    { $set: { key: 'siteTheme', value: theme } },
+    { upsert: true }
+  );
+}
