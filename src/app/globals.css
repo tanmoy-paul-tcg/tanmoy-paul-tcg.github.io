@@ -64,6 +64,7 @@
   --tertiary-color: #e8f4f8;
   --primary-color-dark: #0a0e17;
   --header-bg: rgba(30, 58, 95, 0.7);
+  --bs-table-bg: rgba(0, 0, 0, 0.10);
   --card-backdrop: blur(10px);
   --header-backdrop: blur(20px);
 }
@@ -74,6 +75,19 @@
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+}
+
+[data-site-theme="glassy"] .table {
+  --bs-table-bg: rgba(255, 255, 255, 0.1);
+  --bs-table-color: inherit;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+[data-site-theme="glassy"][data-bs-theme="dark"] .table {
+  --bs-table-bg: rgba(0, 0, 0, 0.2);
 }
 
 [data-site-theme="glassy"][data-bs-theme="light"] {
