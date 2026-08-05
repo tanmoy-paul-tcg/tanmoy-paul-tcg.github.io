@@ -8,11 +8,17 @@ export function DarkModeProvider({ children }) {
   const [mode, setMode] = useState('dark');
 
   useEffect(() => {
-    // Load saved preference from localStorage
-    const saved = localStorage.getItem('darkMode');
-    if (saved) {
-      setMode(saved);
-      document.documentElement.setAttribute('data-bs-theme', saved);
+    // Check if user manually toggled this session
+    const manualOverride = sessionStorage.getItem('darkModeManual');
+    if (manualOverride) {
+      setMode(manualOverride);
+      document.documentElement.setAttribute('data-bs-theme', manualOverride);
+    } else {
+      // Auto mode based on time: dark 6pm–6am, light 6am–6pm
+      const hour = new Date().getHours();
+      const autoMode = (hour >= 6 && hour < 18) ? 'light' : 'dark';
+      setMode(autoMode);
+      document.documentElement.setAttribute('data-bs-theme', autoMode);
     }
   }, []);
 
@@ -20,7 +26,7 @@ export function DarkModeProvider({ children }) {
     const newMode = mode === 'light' ? 'dark' : 'light';
     setMode(newMode);
     document.documentElement.setAttribute('data-bs-theme', newMode);
-    localStorage.setItem('darkMode', newMode);
+    sessionStorage.setItem('darkModeManual', newMode);
   };
 
   return (
