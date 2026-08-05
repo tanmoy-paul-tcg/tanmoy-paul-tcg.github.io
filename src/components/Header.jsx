@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeSwitch from "./ThemeSwitch";
 import ThemeButton from "./ThemeButton";
+import LogoSVG from "./LogoSVG";
 
 function Header() {
   const pathname = usePathname();
@@ -34,7 +35,7 @@ function Header() {
         <Navbar variant="dark" expand="lg" collapseOnSelect>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Brand as={Link} href="/">
-            <img src="/images/logo.svg" alt="logo-image" height="80" className="d-inline-block"/>
+            <LogoSVG height={80} className="d-inline-block" />
           </Navbar.Brand>
           <ThemeButton/>
           <Navbar.Collapse id="basic-navbar-nav" className="col-nav">

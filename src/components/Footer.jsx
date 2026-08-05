@@ -5,6 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faBootstrap } from "@fortawesome/free-brands-svg-icons";
 import { usePathname } from 'next/navigation';
+import TcgSVG from './TcgSVG';
 
 function Footer() {
   const pathname = usePathname();
@@ -17,7 +18,7 @@ function Footer() {
         <Container>
             <Row>
                 <Col sm={4} className='footer-cols mb-3'>
-                    <a href="https://www.tcgcrest.org"><img src="/images/tcg.svg" className='footer-img' alt="TCG CREST"/></a>
+                    <a href="https://www.tcgcrest.org"><TcgSVG className='footer-img' /></a>
                 </Col>
                 <Col sm={4} className='footer-cols mb-3'>
                     <span className='sec'>Address</span>
@@ -62,6 +63,11 @@ function Footer() {
 
                 .footer-img {
                     width: 80%;
+                }
+
+                .footer-img svg {
+                    width: 100%;
+                    height: auto;
                 }
 
                 .footer-cols {
