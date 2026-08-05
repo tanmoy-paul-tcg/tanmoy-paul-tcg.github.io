@@ -64,8 +64,16 @@
   --tertiary-color: #e8f4f8;
   --primary-color-dark: #0a0e17;
   --header-bg: rgba(30, 58, 95, 0.7);
-  --card-backdrop: blur(16px);
+  --card-backdrop: blur(10px);
   --header-backdrop: blur(20px);
+}
+
+[data-site-theme="glassy"] body {
+  background-image: linear-gradient(color-mix(in srgb, var(--bs-body-bg) 70%, transparent), color-mix(in srgb, var(--bs-body-bg) 70%, transparent)), url('/images/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 [data-site-theme="glassy"][data-bs-theme="light"] {
@@ -74,10 +82,10 @@
 }
 
 [data-site-theme="glassy"][data-bs-theme="light"] .card {
-  --bs-card-bg: rgba(255, 255, 255, 0.55);
+  --bs-card-bg: rgba(255, 255, 255, 0.30);
   --bs-card-color: #1e3a5f;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 210, 255, 0.2);
   box-shadow: 0 4px 24px rgba(0, 210, 255, 0.08);
 }
@@ -88,10 +96,10 @@
 }
 
 [data-site-theme="glassy"][data-bs-theme="dark"] .card {
-  --bs-card-bg: rgba(30, 58, 95, 0.4);
+  --bs-card-bg: rgba(30, 58, 95, 0.30);
   --bs-card-color: #e8f4f8;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 210, 255, 0.15);
   box-shadow: 0 4px 24px rgba(0, 210, 255, 0.06);
 }
@@ -185,7 +193,8 @@ body {
   font-family: "Helvetica Neue", sans-serif;
 }
 
-a, a:hover {
+a,
+a:hover {
   text-decoration: none;
 }
 
