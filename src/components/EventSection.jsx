@@ -65,12 +65,17 @@ function EventSection({ name, images }) {
 
                 .react-photo-album--photo {
                     border-radius: 10px;
+                    overflow: hidden;
                     cursor: pointer;
                     transition: all 0.3s ease;
                 }
 
+                .react-photo-album--photo img {
+                    border-radius: 10px;
+                }
+
                 .react-photo-album--photo:hover {
-                    filter: drop-shadow(0px 0px 20px rgba(158, 210, 3, 0.8));
+                    filter: drop-shadow(0px 0px 20px var(--secondary-color));
                     transform: scale(1.02);
                 }
             `}</style>

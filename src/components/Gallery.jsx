@@ -30,7 +30,8 @@ function Gallery({ images }) {
                 }
 
                 .gallery-img:hover {
-                    -webkit-filter: drop-shadow(0px 0px 20px rgba(158, 210, 3, 0.8));
+                    -webkit-filter: drop-shadow(0px 0px 20px var(--secondary-color));
+                    filter: drop-shadow(0px 0px 20px var(--secondary-color));
                 }
             `}</style>
         </div>
